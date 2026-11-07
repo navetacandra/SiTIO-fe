@@ -3,6 +3,10 @@ const { active } = Astro.props;
 ---
 
 <aside>
+    <input type="checkbox" id="aside-toggler" style="display: none;" />
+    <label for="aside-toggler">
+        <span class="close">&times;</span>
+    </label>
     <div class="brand">
         <img src="/logo.png" alt="SiTIO Icon" />
         <div class="brand-text">
