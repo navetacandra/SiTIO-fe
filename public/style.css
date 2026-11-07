@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --yellow: #FACC15;
+    --green: #064E3B;
+    --light-green: #059669;
+    --red: #E11D48;
+    --cyan: #06B6D4;
+    --gray: #64748B;
+    --orange: #F79E38;
+    --white: #FFFFFF;
+    --black: #000000;
+    --bg: #F0F0F0;
+}
+
+* {
+    font-family: Inter, system-ui, -apple-system, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    padding: 1rem 1.125rem;
+    background-color: var(--green);
+    color: var(--white);
+    position: fixed;
+    width: 17.125rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        margin-bottom: 1.75rem;
+
+        img {
+            width: 4rem;
+            aspect-ratio: 1/1;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.65rem;
+
+            & > :nth-child(1) {
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .menu {
+        margin-bottom: 1.5rem;
+
+        .menu-title {
+            text-transform: uppercase;
+            font-size: .875rem;
+            opacity: .7;
+            padding-left: .484375rem;
+            margin-bottom: .5rem;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            padding: .96875rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--white);
+            transition: color ease-in .15s;
+            border-radius: .6875rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            &:hover {
+                background-color: var(--orange);
+            }
+
+            svg {
+                height: 1.3125rem;
+            }
+        }
+    }
+}
+
+main {
+    min-height: 100dvh;
+    width: calc(100% - 19.375rem);
+    padding-left: 19.375rem;
+    background-color: var(--bg);
+}
