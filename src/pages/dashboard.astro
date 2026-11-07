@@ -5,7 +5,218 @@ import Sidebar from "../components/Sidebar.astro";
 
 <Page title="Home">
     <Sidebar />
-    <main>
-        <h1>Hello, world!</h1>
+    <main id="dashboard">
+        <div class="container">
+            <div class="card-list">
+                <div class="card">
+                    <h3 class="card-title">Users</h3>
+                    <p class="card-content">0</p>
+                    <p class="card-footer">Registerd</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">PDLN</h3>
+                    <p class="card-content">0</p>
+                    <p class="card-footer">Activites</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Inbound</h3>
+                    <p class="card-content">0</p>
+                    <p class="card-footer">Requested</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Outbound</h3>
+                    <p class="card-content">0</p>
+                    <p class="card-footer">Requested</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Tickets</h3>
+                    <p class="card-content">0</p>
+                    <p class="card-footer">Requested</p>
+                </div>
+            </div>
+
+            <div class="chart-containers">
+                <div class="chart-container card">
+                    <h3 class="card-title">Activity Trend This Year</h3>
+                    <canvas id="activity-trend"></canvas>
+                </div>
+                <div class="chart-container card">
+                    <h3 class="card-title">Top Visited Countries</h3>
+                    <canvas id="top-destination"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Recent PDLN</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Activity</th>
+                                <th>Creator</th>
+                                <th>Destination</th>
+                                <th>Start Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#200000</td>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Risky Pratama</td>
+                                <td>Belanda</td>
+                                <td>02 Mar 2026</td>
+                                <td>
+                                    <div class="badge pending">Pending</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>#200000</td>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Risky Pratama</td>
+                                <td>Belanda</td>
+                                <td>02 Mar 2026</td>
+                                <td>
+                                    <div class="badge verification">
+                                        Verification
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>#200000</td>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Risky Pratama</td>
+                                <td>Belanda</td>
+                                <td>02 Mar 2026</td>
+                                <td>
+                                    <div class="badge revision">Revision</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>#200000</td>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Risky Pratama</td>
+                                <td>Belanda</td>
+                                <td>02 Mar 2026</td>
+                                <td>
+                                    <div class="badge approved">Approved</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>#200000</td>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Risky Pratama</td>
+                                <td>Belanda</td>
+                                <td>02 Mar 2026</td>
+                                <td>
+                                    <div class="badge rejected">Rejected</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.6.1/chart.umd.min.js"
+        integrity="sha512-vMRyUfXe50uUhhDC+fk6UYBA/1VPj+I7Jn+wK0A3+wSVeUgT9OCz/xoF2M8KFvrmUOlb4Anv0FQUw8NafuzYPw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script>
+        const lineChartCanvas = document.querySelector("#activity-trend");
+        const barChartCanvs = document.querySelector("#top-destination");
+        const lineChartCtx = lineChartCanvas.getContext("2d");
+        const barChartCtx = barChartCanvs.getContext("2d");
+        const trendLabels = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+        ];
+
+        // ActivityTrend
+        new Chart(lineChartCtx, {
+            type: "line",
+            data: {
+                labels: trendLabels,
+                datasets: [
+                    {
+                        label: "PDLN",
+                        data: [30, 69, 57, 14, 62, 68, 80, 65, 38, 21, 85, 99],
+                        fill: false,
+                        borderColor: "#973A93DD",
+                        tension: 0.3,
+                        pointRadius: 5,
+                    },
+                    {
+                        label: "Outbound",
+                        data: [42, 66, 15, 74, 27, 2, 61, 73, 83, 75, 81, 0],
+                        fill: false,
+                        borderColor: "#1BC0C4DD",
+                        tension: 0.3,
+                        pointRadius: 5,
+                    },
+                    {
+                        label: "Inbound",
+                        data: [22, 3, 44, 6, 32, 96, 51, 89, 85, 56, 60, 90],
+                        fill: false,
+                        borderColor: "#E68FC2DD",
+                        tension: 0.3,
+                        pointRadius: 5,
+                    },
+                ],
+            },
+            options: {
+                maintainAspectRatio: false,
+            },
+        });
+
+        // TopDestination
+        new Chart(barChartCtx, {
+            type: "bar",
+            data: {
+                labels: ["Singapura", "Jepang", "Kanada", "Korea", "China"],
+                datasets: [
+                    {
+                        label: "Activities",
+                        data: [70, 61, 54, 53, 30],
+                        barThickness: 35,
+                        categoryPercentage: 0.8,
+                        barPercentage: 0.7,
+                        backgroundColor: "#3468FF",
+                        borderWidth: 0,
+                    },
+                ],
+            },
+            options: {
+                indexAxis: "y",
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        grid: {
+                            display: false,
+                        },
+                    },
+                },
+            },
+        });
+    </script>
 </Page>
