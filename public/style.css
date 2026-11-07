@@ -76,7 +76,7 @@ aside {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            &:hover {
+            &:hover, &.active {
                 background-color: var(--orange);
             }
             svg {

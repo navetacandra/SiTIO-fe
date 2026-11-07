@@ -1,4 +1,5 @@
 ---
+const { active } = Astro.props;
 ---
 
 <aside>
@@ -13,7 +14,10 @@
     <div class="menu">
         <span class="menu-title">Menu</span>
 
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "dashboard" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -28,7 +32,7 @@
             </svg>
             <span>Dashboard</span>
         </a>
-        <a href="#" class="nav-link">
+        <a href="#" class={"nav-link " + (active === "pdln" ? " active" : "")}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -44,7 +48,10 @@
             </svg>
             <span>PDLN</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "inbound" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -59,7 +66,10 @@
             </svg>
             <span>Inbound</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "outbound" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -74,7 +84,10 @@
             </svg>
             <span>Outbound</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "paspor-dinas" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -89,7 +102,10 @@
             </svg>
             <span>Paspor Dinas</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "tickets" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -111,7 +127,12 @@
     <div class="menu">
         <span class="menu-title">Master Data</span>
 
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={
+                "nav-link " + (active === "inbound-programs" ? " active" : "")
+            }
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -128,7 +149,10 @@
             </svg>
             <span>Inbound Programs</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "departments" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -148,7 +172,10 @@
             </svg>
             <span>Departments</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "study-programs" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -164,7 +191,10 @@
             </svg>
             <span>Study Programs</span>
         </a>
-        <a href="#" class="nav-link">
+        <a
+            href="#"
+            class={"nav-link " + (active === "programs" ? " active" : "")}
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
