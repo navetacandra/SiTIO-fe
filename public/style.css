@@ -25,6 +25,7 @@
         sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 label[for="aside-toggler"] {
@@ -113,13 +114,30 @@ aside {
 
 main {
     min-height: 100dvh;
-    width: calc(100% - 19.375rem);
+    width: 100%;
     padding-left: 19.375rem;
     background-color: var(--bg);
 }
 
 .container {
     padding: 1rem 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.title-container {
+    margin-bottom: 1.5rem;
+    .title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--green);
+    }
+    .subtitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--black);
+        opacity: .7;
+    }
 }
 
 .card {
@@ -129,6 +147,9 @@ main {
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
+    &:has(~.card) {
+        margin-bottom: 1.5rem;
+    }
     .card-title {
         color: var(--green);
         font-weight: bold;
@@ -187,6 +208,90 @@ main {
     }
     &.approved {
         --bg-badge: var(--light-green);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.input-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.input-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    .form-input {
+        flex: 1 0 auto;
+        margin-bottom: 0;
+        .label-file {
+            width: 100%;
+        }
+    }
+}
+
+.form-input {
+    margin-bottom: 1rem;
+    label:not(.label-file) {
+        font-weight: 600;
+        font-size: .875rem;
+        opacity: .75;
+        margin-bottom: .375rem;
+        display: block;
+        .required-mark {
+            opacity: 1;
+            color: var(--red);
+        }
+    }
+    input, select, textarea {
+        padding: .75rem .3125rem;
+        font-size: .875rem;
+        border-radius: .375rem;
+        border: 1px solid var(--gray);
+        width: 100%;
+        &[type="file"] {
+            display: none;
+        }
+    }
+    .error-message {
+        font-size: .675rem;
+        color: var(--red);
+    }
+    .label-file {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: .5rem;
+        border: 2px dashed var(--gray);
+        border-radius: .5rem;
+        cursor: pointer;
+        width: max-content;
+        svg {
+            color: var(--green);
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        p {
+            color: var(--green);
+            font-weight: 600;
+            font-size: .875rem;
+        }
+        .input-hint {
+            color: var(--black);
+            font-size: .65rem;
+            font-weight: 500;
+            opacity: .7;
+        }
     }
 }
 
@@ -257,6 +362,12 @@ main {
     main {
         width: 100%;
         padding-left: 0;
+    }
+
+    .input-cols {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
     #dashboard {

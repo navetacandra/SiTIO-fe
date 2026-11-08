@@ -1,0 +1,52 @@
+---
+const { id, label, type, placeholder, hint, required, showRequired, error } =
+    Astro.props;
+const hiddenFileInput = type === "file" ? "display: hidden" : "";
+---
+
+<div class="form-input">
+    <label for={id}>
+        {label}
+        {required && showRequired && <small class="required-mark">*</small>}
+    </label>
+    <div class="input-group">
+        {type !== "textarea" && (
+            <input
+                type={type}
+                placeholder={placeholder}
+                id={id}
+                name={id}
+                style={hiddenFileInput}
+                {required}
+            />
+        )}
+        {type === "textarea" && <textarea
+            placeholder={placeholder}
+            id={id}
+            name={id}
+            {required}
+        ></textarea>}
+        {type === "file" && (
+            <label for={id} class="label-file">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M12 3v12" />
+                    <path d="m17 8-5-5-5 5" />
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                </svg>
+                <div>
+                    <p>Add File</p>
+                    <small class="input-hint">{hint}</small>
+                </div>
+            </label>
+        )}
+    </div>
+    {!!error && <small class="error-message">{error}</small>}
+</div>
