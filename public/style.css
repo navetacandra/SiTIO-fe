@@ -82,6 +82,7 @@ aside {
     }
   }
 
+
   .menu {
     margin-bottom: 1.5rem;
     .menu-title {
@@ -452,3 +453,10 @@ form {
     }
   }
 }
+
+.btn-create {
+    background-color: var(--light-green);
+    color: white;
+    border-radius: 10px;
+    padding: 13px;
+  }
