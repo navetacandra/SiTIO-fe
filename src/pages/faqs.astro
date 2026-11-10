@@ -1,0 +1,94 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title="FAQs">
+    <Sidebar active="faqs" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">FAQs</h2>
+                <p class="subtitle">Questions and answers shown to users</p>
+            </div>
+
+            <div class="card-list">
+                <div class="card">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>QUESTION</th>
+                                    <th>ANSWER</th>
+                                    <th>UPDATED BY</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Apakah pengajuan yang ditolak dapat
+                                        diajukan ulang?
+                                    </td>
+                                    <td>
+                                        Pengajuan dengan status REVISION dapat
+                                        diperbaiki dan diajukan ulang, sedangkan
+                                        pengajuan REJECTED harus dibuat baru.
+                                    </td>
+                                    <td>Siti Aminah</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Bagaimana cara mengetahui status
+                                        pengajuan?
+                                    </td>
+                                    <td>
+                                        Status pengajuan dapat dilihat pada
+                                        halaman detail PDLN atau Outbound.
+                                        Status akan berubah sesuai tahapan
+                                        verifikasi.
+                                    </td>
+                                    <td>Siti Aminah</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Apa dokumen yang diperlukan dalam
+                                        persyaratan outbound?
+                                    </td>
+                                    <td>
+                                        Dokumen wajib meliputi surat permohonan,
+                                        surat persetujuan dosen pembimbing, dan
+                                        laporan akhir setelah kegiatan selesai.
+                                    </td>
+                                    <td>Dr. Ahmad Fauzi, M.T.</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Apa itu SiTIO?</td>
+                                    <td>
+                                        SiTIO adalah sistem informasi
+                                        terintegrasi untuk pengelolaan kegiatan
+                                        internasional mahasiswa dan dosen.
+                                    </td>
+                                    <td>Dr. Ahmad Fauzi, M.T.</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Page>

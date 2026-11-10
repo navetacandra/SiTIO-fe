@@ -4,87 +4,115 @@ import Sidebar from "../components/Sidebar.astro";
 import Navbar from "../components/Navbar.astro";
 ---
 
+<<<<<<< HEAD
 <page title="Outbound">
     <Page title="Outbound">
     <Sidebar active="Outbound" />
+=======
+<Page title="Outbound">
+    <Sidebar active="outbound" />
+>>>>>>> 5d2d5574bac7ad560a0a99586f852df864edbbe8
     <Navbar />
     <main id="dashboard">
         <div class="container">
-            <h3 style="color: #064e3b;">Outbound Letters</h3>
-                    
-                    <h4 style="color: #64748b; font-weight: 600; margin-top: -13px;padding-bottom: 20px;"> <br>Incoming guest and program application</h4>
-               
+            <div class="between">
+                <div class="title-container">
+                    <h2 class="title">Outbound Request</h2>
+                    <p class="subtitle">
+                        Request for enrollment and recommendation letters
+                    </p>
+                </div>
+                <a href="#" class="btn green">Create</a>
+            </div>
+
             <div class="card-list">
-                
-                     <div class="card">
-                <div class="table-container">
-               <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>PROGRAM</th>
-                        <th>LETTER TYPE</th>
-                        <th>STATUS</th>
-                        <th>ACTION</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>#6000</td>
-                        <td>Aung Ko Latt</td>
-                        <td>ASEAN Student Exchange</td>
-                        <td>Enrollment</td>
-                        <td> <div class="badge rejected">Rejected</div></td>
-                        <td> </td>
-                    </tr>
+                <div class="card">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>NAME</th>
+                                    <th>PROGRAM</th>
+                                    <th>LETTER TYPE</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#6000</td>
+                                    <td>Aung Ko Latt</td>
+                                    <td>ASEAN Student Exchange</td>
+                                    <td>Enrollment</td>
+                                    <td>
+                                        <div class="badge rejected">
+                                            Rejected
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="gray">Details</button>
+                                    </td>
+                                </tr>
 
-                    <tr>
-                        <td>#9283</td>
-                        <td>Lim Wie Jie</td>
-                        <td>Summer Course Sustainable Development</td>
-                        <td>Director Recommendation</td>
-                        <td><div class="badge pending">Pending</div></td>
-                        <td> </td>
+                                <tr>
+                                    <td>#9283</td>
+                                    <td>Lim Wie Jie</td>
+                                    <td>
+                                        Summer Course Sustainable Development
+                                    </td>
+                                    <td>Director Recommendation</td>
+                                    <td>
+                                        <div class="badge pending">Pending</div>
+                                    </td>
+                                    <td> <button type="button" class="gray">Details</button> </td>
+                                </tr>
 
-                    </tr>
+                                <tr>
+                                    <td>#8927</td>
+                                    <td>Somchal Prasert</td>
+                                    <td>
+                                        Summer Course Sustainable Development
+                                    </td>
+                                    <td>Director Recommendation</td>
+                                    <td>
+                                        <div class="badge approved">
+                                            Approved
+                                        </div>
+                                    </td>
+                                    <td> <button type="button" class="gray">Details</button>  </td>
+                                </tr>
 
-                    <tr>
-                        <td>#8927</td>
-                        <td>Somchal Prasert</td>
-                        <td>Summer Course Sustainable Development</td>
-                        <td>Director Recommendation</td>
-                        <td> <div class="badge approved">Approved</div></td>
-                        <td> </td>
+                                <tr>
+                                    <td>#0182</td>
+                                    <td>Maria Santosa</td>
+                                    <td>ASEAN Student Exchange</td>
+                                    <td>Visa Recommendation</td>
+                                    <td>
+                                        <div class="badge approved">
+                                            Approved
+                                        </div>
+                                    </td>
+                                    <td> <button type="button" class="gray">Details</button>  </td>
+                                </tr>
 
-                    </tr>
-
-                    <tr>
-                        <td>#0182</td>
-                        <td>Maria Santosa</td>
-                        <td>ASEAN Student Exchange</td>
-                        <td>Visa Recommendation</td>
-                        <td><div class="badge approved">Approved</div></td>
-                        <td> </td>
-                    </tr>
-
-                    <tr>
-                        <td>#7103</td>
-                        <td>Nguyen Van An</td>
-                        <td>ASEAN Student Exchange</td>
-                        <td>Enrollment</td>
-                        <td> <div class="badge approved">Approved</div></td>
-                    </tr>
-
-                </tbody>
-                
-               </table>
-               </div>
-               </div>
-
+                                <tr>
+                                    <td>#7103</td>
+                                    <td>Nguyen Van An</td>
+                                    <td>ASEAN Student Exchange</td>
+                                    <td>Enrollment</td>
+                                    <td>
+                                        <div class="badge approved">
+                                            Approved
+                                        </div>
+                                    </td>
+                                    <td> <button type="button" class="gray">Details</button>  </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                </div>
-                </main>
-                </Page>
-</page>
+            </div>
+        </div>
+    </main>
+</Page>
