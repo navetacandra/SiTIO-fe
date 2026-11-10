@@ -5,14 +5,17 @@ import Navbar from "../components/Navbar.astro";
 ---
 
 <page title="Inbound">
-    <Page title="Home">
+    <Page title="FAQ">
     <Sidebar active="Outbound" />
     <Navbar />
     <main id="dashboard">
         <div class="container">
-            <h3 style="color: #064e3b;">FAQ</h3>
-                    
-                    <h4 style="color: #64748b; font-weight: 600; margin-top: -13px;padding-bottom: 20px;"> <br>Questions and answers shown to users</h4>
+            <div class="title-container">
+                <h2 class="title">FAQs</h2>
+                <p class="subtitle">
+                    Questions and answers shown to users
+                </p>
+            </div>
                
             <div class="card-list">
                 
@@ -23,7 +26,6 @@ import Navbar from "../components/Navbar.astro";
                     <tr>
                         <th>QUESTION</th>
                         <th>ANSWER</th>
-                        <th>UPDATED BY</th>
                         <th>ACTIONS</th>
                         
                     </tr>
@@ -32,7 +34,6 @@ import Navbar from "../components/Navbar.astro";
                     <tr>
                         <td>Apakah pengajuan yang ditolak dapat diajukan ulang?</td>
                         <td>Pengajuan dengan status REVISION dapat diperbaiki dan diajukan ulang, sedangkan pengajuan REJECTED harus dibuat baru.</td>
-                        <td>Siti Aminah</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -40,7 +41,6 @@ import Navbar from "../components/Navbar.astro";
                     <tr>
                         <td>Bagaimana cara mengetahui status pengajuan?</td>
                         <td>Status pengajuan dapat dilihat pada halaman detail PDLN atau Outbound. Status akan berubah sesuai tahapan verifikasi.</td>
-                        <td>Siti Aminah</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -48,7 +48,7 @@ import Navbar from "../components/Navbar.astro";
                     <tr>
                         <td>Apa dokumen yang diperlukan dalam persyaratan outbound?</td>
                         <td>Dokumen wajib meliputi surat permohonan, surat persetujuan dosen pembimbing, dan laporan akhir setelah kegiatan selesai.</td>
-                        <td>Dr. Ahmad Fauzi, M.T.</td>
+                    
                         <td></td>
                         <td></td>
                     </tr>
@@ -57,7 +57,7 @@ import Navbar from "../components/Navbar.astro";
                     <tr>
                         <td>Apa itu SiTIO?</td>
                         <td>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</td>
-                        <td>Dr. Ahmad Fauzi, M.T.</td>
+                    
                         <td></td>
                         <td></td>
                     </tr>
