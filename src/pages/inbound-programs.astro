@@ -1,0 +1,58 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title = "Inbound Program">
+    <Sidebar active="inbound program" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">Inbound Programs</h2>
+                    <p class="subtitle">Request for enrollment and recommendation letter.</p>
+                </div>
+                <button type="button" class="btn-create">New Program</button>
+            </div>
+
+                <div class="table-container" style="width 100%">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Studi Program</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Summer Course Sustainable Development</td>
+                                <td>Hubungan International</td>
+                                <td>15 Jun 2026</td>
+                                <td>15 Jul 2026</td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="red">Delete</button> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Summer Course Sustainable Development</td>
+                                <td>Teknik Informatika</td>
+                                <td>1 Sept 2025</td>
+                                <td>31 Jan 2026</td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="gray">Details</button> 
+                                </td>   
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </main>
+</Page>

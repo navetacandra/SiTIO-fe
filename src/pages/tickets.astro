@@ -1,0 +1,87 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title="Tickets">
+    <Sidebar active="tickets" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">Support Tickets</h2>
+                    <p class="subtitle">Manage tickets for support and enquiries</p>
+                </div>
+                <button type="button" class="btn-create">Create Paspor Dinas</button>
+            </div>
+
+          
+                <div class="table-container" style="width 100%">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Question</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#400000</td>
+                                <td>Berapa lama proses penerbitan surat tugas untuk kegiatan internasional? </td>
+                                <td>bagas.setiawan@io.pnj.ac.id</td>
+                                <td>
+                                    <div class="badge approved">Done</div>
+                                </td>
+                                <td>
+                                    <button type="button" class="gray">Details</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#400000</td>
+                                <td>Berapa lama proses penerbitan surat tugas untuk kegiatan internasional?</td>
+                                <td>bagas.setiawan@io.pnj.ac.id</td>
+                                <td>
+                                    <div class="badge approved">Done</div>
+                                </td>
+                                <td>
+                                    <button type="button" class="gray">Details</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#400000</td>
+                                <td>Berapa lama proses penerbitan surat tugas untuk kegiatan internasional?</td>
+                                <td>bagas.setiawan@io.pnj.ac.id</td>
+                                <td>
+                                    <div class="badge pending">Pending</div>
+                                </td>
+                                <td>
+                                    <button type="button" class="gray">Details</button>
+                                    <button type="button" class="gray">Mark Done</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#400000</td>
+                                <td>Berapa lama proses penerbitan surat tugas untuk kegiatan internasional?</td>
+                                <td>bagas.setiawan@io.pnj.ac.id</td>
+                                <td>
+                                    <div class="badge approved">Approved</div>
+                                </td>
+                                <td>
+                                    <button type="button" class="gray">Details</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+    </main>
+</Page>

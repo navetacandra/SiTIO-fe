@@ -1,0 +1,70 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title="Study Programs">
+    <Sidebar active="study-programs" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">Study Programs</h2>
+                    <p class="subtitle">Study Programs within each departments</p>
+                </div>
+                <button type="button" class="btn-create">New Program</button>
+            </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hubungan International</td>
+                                <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="red">Delete</button> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Hubungan International</td>
+                                <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="red">Delete</button> 
+                                </td>   
+                            </tr>
+
+                            <tr>
+                                <td>Hubungan International</td>
+                                <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="red">Delete</button> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Hubungan International</td>
+                                <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="red">Delete</button> 
+                                </td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </main>
+</Page>

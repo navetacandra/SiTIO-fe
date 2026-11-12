@@ -1,0 +1,84 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title="Paspor Dinas">
+    <Sidebar active="paspor dinas" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">Paspor Dinas</h2>
+                    <p class="subtitle">Programs available for inbound application</p>
+                </div>
+                <button type="button" class="btn-create">Create Paspor Dinas</button>
+            </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Jenis Pengajuan</th>
+                                <th>status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Exit Permit</td>
+                                <td>
+                                    <div class="badge approved">Done</div>
+                                </td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="gray">Details</button> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Exit Permit</td>
+                                <td>
+                                    <div class="badge approved">Done</div>
+                                </td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="gray">Details</button> 
+                                </td>   
+                            </tr>
+
+                            <tr>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Pembuatan</td>
+                                <td>
+                                    <div class="badge pending">Pending</div>
+                                </td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="gray">Details</button> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Penelitian Kolaboratif Keamanan Siber</td>
+                                <td>Exit Permit</td>
+                                <td>
+                                    <div class="badge approved">Done</div>
+                                </td>
+                                <td> 
+                                    <button type="button" class="yellow">Edit</button>
+                                    <button type="button" class="gray">Details</button> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </main>    
+</Page>
+            

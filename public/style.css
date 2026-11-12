@@ -7,12 +7,12 @@
   --red: #e11d48;
   --cyan: #06b6d4;
   --gray: #64748b;
-  --light-gray: #e1e1e1;
+  --light-gray: #E1E1E1;
   --orange: #f79e38;
   --white: #ffffff;
   --black: #000000;
   --bg: #f0f0f0;
-  --shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+  --shadow: 0px 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -81,6 +81,7 @@ aside {
       }
     }
   }
+
 
   .menu {
     margin-bottom: 1.5rem;
@@ -183,8 +184,8 @@ main {
 }
 
 .container {
-  padding: 1rem 2rem;
-  max-width: 64rem;
+  padding: 1.5rem 2rem;
+  max-width: 104rem;
   margin: 0 auto;
 }
 
@@ -203,13 +204,30 @@ main {
   }
 }
 
+.pdln-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .title-container {
+    margin-bottom: 0;
+  }
+
+  .btn-create {
+    flex-shrink: 0;
+  }
+}
+
 .card {
   padding: 0.75rem;
   border-radius: 0.5625rem;
   background: var(--white);
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow);
+  
   &:has(~ .card) {
     margin-bottom: 1.5rem;
   }
@@ -223,21 +241,24 @@ main {
 .table-container {
   overflow-x: auto;
   overflow-y: hidden;
+  background: var(--white);
+  border-radius: 0.5625rem;
+  box-shadow: var(--shadow);
   table {
     width: 100%;
     display: table;
     border-collapse: collapse;
     thead {
       color: var(--light-green);
-      background: var(--light-gray);
+      background: color-mix(in srgb, var(--light-gray) 30%, transparent);
       text-align: left;
       font-size: 1rem;
     }
     tr {
-      border-bottom: 1px solid var(--gray);
+      border-bottom: 1.6px solid var(--light-gray);
       th,
       td {
-        padding: 0.875rem 0.25rem;
+        padding: 0.875rem 1rem;
       }
       td {
         font-size: 0.875rem;
@@ -255,7 +276,7 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
   border-color: var(--bg-badge);
-  background-color: color-mix(in srgb, var(--bg-badge) 20%, #0000);
+  background-color: color-mix(in srgb, var(--bg-badge) 10%, #0000);
   color: var(--bg-badge);
   &.pending {
     --bg-badge: var(--yellow);
@@ -404,7 +425,7 @@ form {
     margin-top: 2rem;
     table {
       td {
-        font-weight: 700;
+        font-weight: 500;
         opacity: 0.6;
       }
     }
@@ -427,6 +448,11 @@ form {
 
   nav {
     justify-content: space-between;
+  }
+
+  .pdln-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   main {
@@ -452,3 +478,12 @@ form {
     }
   }
 }
+
+.btn-create {
+    background-color: var(--light-green);
+    color: white;
+    border-radius: 10px;
+    padding: 13px;
+    border: none;
+    box-shadow: none;
+  }

@@ -1,0 +1,142 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title ="PDLN">
+    <Sidebar active="pdln" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">PDLN Activity</h2>
+                    <p class="subtitle">Manage outbound study and international activity requests.</p>
+                </div>
+                <button type="button" class="btn-create">Create PDLN</button>
+            </div>
+
+        
+                <div class="card-list">
+                    <div class="card"> 
+                        <h3 class="card-title">Pending</h3>
+                        <p class="card-content">1</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Verification</h3>
+                        <p class="card-content">1</p>
+                    </div> 
+                    <div class="card">
+                        <h3 class="card-title">Revision</h3>
+                        <p class="card-content">1</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Srikandi</h3>
+                        <p class="card-content">0</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Approved</h3>
+                        <p class="card-content">1</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Rejected</h3>
+                        <p class="card-content">1</p>   
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Done</h3>
+                        <p class="card-content">1</p> 
+                    </div>          
+                </div>
+
+                
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Activity</th>
+                                    <th>Creator</th>
+                                    <th>Destination</th>
+                                    <th>Start Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>  
+                                    <td>#200000</td>
+                                    <td>Penelitian Kolaboratif Keamanan Siber <div style="opacity: 0.65;">PENELITIAN </div></td>
+                                    <td>Risky Pratama <div style="opacity: 0.65;">MAHASISWA </div></td>
+                                    <td>Delft University of Technology,<br> Delft, Belanda</td>
+                                    <td>02 Mar 2026</td>
+                                    <td>
+                                        <div class="badge pending">Pending</div></td>
+                                    <td>
+                                        <button type="button" class="gray">Details</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#200000</td>
+                                    <td>Penelitian Kolaboratif Keamanan Siber <div style="opacity: 0.65;">PENELITIAN </div></td>
+                                    <td>Risky Pratama <div style="opacity: 0.65;">MAHASISWA </div></td>
+                                    <td>Delft University of Technology,<br> Delft, Belanda</td>
+                                    <td>02 Mar 2026</td>
+                                    <td>
+                                        <div class="badge verification">
+                                            Verification
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="gray">Details</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#200000</td>
+                                    <td>Penelitian Kolaboratif Keamanan Siber <div style="opacity: 0.65;">PENELITIAN </div></td>
+                                    <td>Risky Pratama <div style="opacity: 0.65;">MAHASISWA </div></td>
+                                    <td>Delft University of Technology,<br> Delft, Belanda</td>
+                                    <td>02 Mar 2026</td>
+                                    <td>
+                                        <div class="badge pending">Pending</div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="gray">Details</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#200000</td>
+                                    <td>Penelitian Kolaboratif Keamanan Siber <div style="opacity: 0.65;">PENELITIAN </div></td>
+                                    <td>Risky Pratama <div style="opacity: 0.65;">MAHASISWA </div></td>
+                                    <td>Delft University of Technology, <br>Delft, Belanda</td>
+                                    <td>02 Mar 2026</td>
+                                    <td>
+                                        <div class="badge revision">Revision</div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="gray">Details</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#200000</td>
+                                    <td>Penelitian Kolaboratif Keamanan Siber <div style="opacity: 0.65;">PENELITIAN </div></td>
+                                    <td>Risky Pratama <div style="opacity: 0.65;">MAHASISWA </div></td>
+                                    <td>Delft University of Technology,<br> Delft, Belanda</td>
+                                    <td>02 Mar 2026</td>
+                                    <td>
+                                        <div class="badge approved">Approved</div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="gray">Details</button>
+                                    </td>       
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+    </main>
+</Page>             

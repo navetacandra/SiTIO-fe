@@ -9,23 +9,24 @@ import Navbar from "../components/Navbar.astro";
     <Navbar />
     <main id="dashboard">
         <div class="container">
-            <div class="title-container">
-                <h2 class="title">Inbound Request</h2>
-                <p class="subtitle">Incoming guest and program application</p>
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">Inbound Activity</h2>
+                    <p class="subtitle">Manage income guest and program application.</p>
+                </div>
+                <button type="button" class="btn-create">Create Inbound</button>
             </div>
 
-            <div class="card-list">
-                <div class="card">
-                    <div class="table-container">
+                    <div class="table-container" style="width: 100%;">
                         <table>
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>NAME</th>
-                                    <th>PROGRAM</th>
-                                    <th>LETTER TYPE</th>
-                                    <th>STATUS</th>
-                                    <th>ACTION</th>
+                                    <th>Name</th>
+                                    <th>Program</th>
+                                    <th>Letter Type</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,7 +40,7 @@ import Navbar from "../components/Navbar.astro";
                                             Rejected
                                         </div>
                                     </td>
-                                    <td></td>
+                                    <td> <button type="button" class="gray">Details</button> </td>
                                 </tr>
 
                                 <tr>
@@ -52,7 +53,7 @@ import Navbar from "../components/Navbar.astro";
                                     <td>
                                         <div class="badge pending">Pending</div>
                                     </td>
-                                    <td></td>
+                                    <td> <button type="button" class="gray">Details</button> </td>
                                 </tr>
 
                                 <tr>
@@ -67,7 +68,7 @@ import Navbar from "../components/Navbar.astro";
                                             Approved
                                         </div>
                                     </td>
-                                    <td></td>
+                                    <td> <button type="button" class="gray">Details</button>  </td>
                                 </tr>
 
                                 <tr>
@@ -80,7 +81,7 @@ import Navbar from "../components/Navbar.astro";
                                             Approved
                                         </div>
                                     </td>
-                                    <td></td>
+                                    <td> <button type="button" class="gray">Details</button> </td>
                                 </tr>
 
                                 <tr>
@@ -93,12 +94,11 @@ import Navbar from "../components/Navbar.astro";
                                             Approved
                                         </div>
                                     </td>
+                                    <td> <button type="button" class="gray">Details</button> </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
     </main>
 </Page>
