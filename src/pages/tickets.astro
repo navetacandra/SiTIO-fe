@@ -9,13 +9,16 @@ import Navbar from "../components/Navbar.astro";
     <Navbar />
     <main id="dashboard">
         <div class="container">
-            <div class="title-container">
-                <h2 class="title">Tickets</h2>
-                <p class="subtitle">Manage tickets for support and inquiries.</p>
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">Support Tickets</h2>
+                    <p class="subtitle">Manage tickets for support and enquiries</p>
+                </div>
+                <button type="button" class="btn-create">Create Paspor Dinas</button>
             </div>
 
-            <div class="card">
-                <div class="table-container">
+          
+                <div class="table-container" style="width 100%">
                     <table>
                         <thead>
                             <tr>
@@ -80,6 +83,5 @@ import Navbar from "../components/Navbar.astro";
                 </div>
             </div>
 
-        </div>
     </main>
 </Page>
