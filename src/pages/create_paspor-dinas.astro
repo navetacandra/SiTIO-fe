@@ -1,0 +1,99 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create Paspor Dinas">
+    <Sidebar active="create_paspor-dinas" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">Create Paspor Dinas</h2>
+                <p class="subtitle">
+                    Programs available for inbound applications
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="input-cols">
+                    <Input
+                        label="Activity"
+                        id="activity"
+                        placeholder="Name of the activity"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Jenis Pengajuan"
+                        id="jenis_pengajuan"
+                        placeholder="Jenis pengajuan"
+                        type="select"
+                        options={["Exit Permit", "Pembuatan"]}
+                        required
+                        showRequired    
+                    />
+                </div>
+
+                <div class="input-flex">
+                    <Input
+                        label="Kerpeg"
+                        id="kerpeg"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Akta Kelahiran"
+                        id="akta_kelahiran"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                        /> 
+                    <Input
+                        label="Ijazah Terakhir"
+                        id="ijazah_terakhir"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Kartu Keluarga"
+                        id="kartu_keluarga"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required  
+                        showRequired
+                    />
+                    <Input
+                        label="Foto"
+                        id="foto"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input 
+                        label="SK PNS"
+                        id="sk_pns"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                </div>
+            </div>
+
+            <br/>
+            <button type="button" class="btn-create">Create Paspor Dinas</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+
+        </div>
+    </main>
+</Page>

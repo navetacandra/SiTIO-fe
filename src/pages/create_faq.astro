@@ -1,0 +1,49 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create FAQ">
+    <Sidebar active="create_faq" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Create FAQ</h3>
+                </div>
+                
+                <Input
+                    label="Name"
+                    id="name"
+                    placeholder="Enter the name"
+                    type="text"
+                    required
+                    showRequired
+                />
+                <Input
+                    label="Question"
+                    id="question"
+                    placeholder="Enter the question"
+                    type="textarea"
+                    required
+                    showRequired
+                />
+                <Input
+                    label="Answer"
+                    id="answer"
+                    placeholder="Enter the answer"
+                    type="textarea"
+                    required
+                    showRequired
+                />
+            </div>
+
+            <br/>
+            <button type="button" class="btn-create">Create FAQ</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+    </main>
+</Page>

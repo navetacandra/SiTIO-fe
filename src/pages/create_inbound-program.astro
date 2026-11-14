@@ -1,0 +1,42 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create Inbound Program">
+    <Sidebar active="create_inbound-program" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Create Inbound Program</h3>
+                </div>
+                
+                <Input
+                    label="Name"
+                    id="name"
+                    placeholder="Name of the program"
+                    type="text"
+                    required
+                    showRequired
+                />
+                <Input
+                    label="Study Program"
+                    id="study_program"
+                    placeholder="Select a study program"
+                    type="textarea"
+                    required
+                    showRequired    
+                />
+            </div>
+
+            <br/>
+            <button type="button" class="btn-create">Create Inbound Program</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+            
+        </div>
+    </main>
+</Page>
