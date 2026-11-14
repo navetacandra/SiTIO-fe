@@ -235,6 +235,10 @@ main {
     color: var(--green);
     font-weight: bold;
     font-size: 1rem;
+
+    .card-content .input-box {
+      border-color: #e11d48;
+    }
   }
 }
 
@@ -487,3 +491,4 @@ form {
     border: none;
     box-shadow: none;
   }
+

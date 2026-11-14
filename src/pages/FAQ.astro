@@ -4,22 +4,20 @@ import Sidebar from "../components/Sidebar.astro";
 import Navbar from "../components/Navbar.astro";
 ---
 
-<page title="Inbound">
+<page title="FAQ">
     <Page title="FAQ">
-    <Sidebar active="Outbound" />
+    <Sidebar active="FAQ" />
     <Navbar />
     <main id="dashboard">
         <div class="container">
-            <div class="title-container">
-                <h2 class="title">FAQs</h2>
-                <p class="subtitle">
-                    Questions and answers shown to users
-                </p>
+             <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">FAQ</h2>
+                    <p class="subtitle">Question and answer are shown to users</p>
+                </div>
+                <button type="button" class="btn-create">New FAQ</button>
             </div>
                
-            <div class="card-list">
-                
-                     <div class="card">
                 <div class="table-container">
                <table>
                 <thead>
@@ -66,8 +64,6 @@ import Navbar from "../components/Navbar.astro";
                 </tbody>
                 
                </table>
-               </div>
-               </div>
 
                 </div>
                 </div>

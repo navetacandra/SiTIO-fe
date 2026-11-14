@@ -1,0 +1,31 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Page title ="PDLN">
+    <Sidebar active="pdln" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="between pdln-header">
+                <div class="title-container">
+                    <h2 class="title">PDLN Activity</h2>
+                    <p class="subtitle">Manage outbound study and international activity requests.</p>
+                </div>
+
+        </div>
+        <div class="card-list">
+            <div class="card">
+                <p class="card-content">Academic Year </p>
+                <form class="input-box" action="/url" method="GET">
+        <p>Please enter some text below:</p>
+        <input type="text">
+    </form>
+
+            </div>
+        </div>
+        </div>
+    </main>
+</Page>
