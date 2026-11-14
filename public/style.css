@@ -242,6 +242,29 @@ main {
   }
 }
 
+.card2 {
+  padding: 0.75rem;
+  border-radius: 0.5625rem;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #D9D9D9;
+  
+  
+  &:has(~ .card2) {
+    margin-bottom: 1.5rem;
+  }
+  .card2-title {
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1rem;
+
+    .card2-content .input-box {
+      border-color: #e11d48;
+    }
+  }
+}
+
 .table-container {
   overflow-x: auto;
   overflow-y: hidden;

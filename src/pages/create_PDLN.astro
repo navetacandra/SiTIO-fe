@@ -1,31 +1,228 @@
 ---
 import Page from "../template/Page.astro";
 import Sidebar from "../components/Sidebar.astro";
-import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
 ---
 
-<Page title ="PDLN">
-    <Sidebar active="pdln" />
-    <Navbar />
-    <main id="dashboard">
+
+<Page title="Home">
+    <Sidebar active="dashboard" />
+    <main>
         <div class="container">
-            <div class="between pdln-header">
-                <div class="title-container">
-                    <h2 class="title">PDLN Activity</h2>
-                    <p class="subtitle">Manage outbound study and international activity requests.</p>
-                </div>
-
-        </div>
-        <div class="card-list">
-            <div class="card">
-                <p class="card-content">Academic Year </p>
-                <form class="input-box" action="/url" method="GET">
-        <p>Please enter some text below:</p>
-        <input type="text">
-    </form>
-
+            <div class="title-container">
+                <h2 class="title">Create PDLN</h2>
+                <p class="subtitle">
+                    A new PDLN starts in Pending status and includes you as a
+                    participant.
+                </p>
             </div>
-        </div>
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Activity</h3>
+                </div>
+                <Input
+                    label="Activity Name"
+                    id="activity_name"
+                    placeholder="Name of activity"
+                    type="text"
+                    error="Contoh text error"
+                   
+                />
+                <div class="input-cols">
+                    <Input
+                        label="Activity Type"
+                        id="activity_type"
+                        placeholder="Type of activity (e.g International Confrence)"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Destination Country"
+                        id="destination_country"
+                        placeholder="Country where activities take place"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                </div>
+                <div class="input-cols">
+                    <Input
+                        label="Destination City"
+                        id="destination_city"
+                        placeholder="City where activities take place"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Destination Institution"
+                        id="destination_institution"
+                        placeholder="Institution where activities take place or which invites"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                </div>
+                <div class="input-cols">
+                    <Input
+                        label="Start Date"
+                        id="start_date"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="End Date"
+                        id="end_date"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                </div>
+                <Input
+                    label="Follow Up Plan"
+                    id="followup_plan"
+                    type="textarea"
+                    placeholder="Follow up plan after this activity"
+                    required
+                    showRequired
+                />
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">
+                        Participants
+                    </h3>
+                    <p class="subtitle" style="font-size: 14px; font-weight: 500; color: rgb(54, 54, 54); padding-top: 4px;">You are always included automatically</p>
+                </div>
+                <div style="width: 20%; border-color: #D9D9D9; margin-left: 80%;"><Input type="text" placeholder="Filter by name, email" /></div>
+                <div class="card2" style="margin-top: -2px;">
+                    <table>
+                        
+                        <tbody>
+                            <tr>
+                                <td><img src="checkbox.png" alt="Checkbox" width="35" height="35"></td>
+                                <td style="transform: translatex(-5%);">Agus Setiawan<div style="opacity: 0.65;">MAHASISWA - agus.setiawan@io.pnj.ac.id</div></td>
+                            </tr>
+                            <tr>
+                                <td><img src="checkbox.png" alt="Checkbox" width="35" height="35"></td>
+                                <td style="transform: translatex(-5%);">Agus Setiawan<div style="opacity: 0.65;">MAHASISWA - agus.setiawan@io.pnj.ac.id</div></td>
+                            </tr>
+                            <tr>
+                                <td><img src="checkbox.png" alt="Checkbox" width="35" height="35"></td>
+                                <td style="transform: translatex(-5%);">Agus Setiawan<div style="opacity: 0.65;">MAHASISWA - agus.setiawan@io.pnj.ac.id</div></td>
+                            </tr>
+                            <tr>
+                                <td><img src="checkbox.png" alt="Checkbox" width="35" height="35"></td>
+                                <td style="transform: translatex(-5%);">Agus Setiawan<div style="opacity: 0.65;">MAHASISWA - agus.setiawan@io.pnj.ac.id</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Documents</h3>
+                </div>
+                <div class="input-flex">
+                    <Input
+                        label="Brosur"
+                        id="brosur"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Bukti Registrasi"
+                        id="Bukti_Registrasi"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Clearance Letter"
+                        id="Clearance_Letter"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Draft MOU / MOA"
+                        id="Draft_MOU/MOA"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Jadwal Kegiatan"
+                        id="Jadwal_Kegiatan"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Memo Persetujuan"
+                        id="Memo_Persetujuan"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="SK Relevansi"
+                        id="SK_Relevansi"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="SP Pembiayaan"
+                        id="SP_Pembiayaan"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Surat Tugas"
+                        id="Surat_Tugas"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="TOR Kegiatan"
+                        id="TOR_Kegiatan"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Undangan"
+                        id="Undangan"
+                        type="file"
+                        hint="PDF, JPG, or PNG (max. 5MB)"
+                        required
+                        showRequired
+                    />
+                </div>
+            </div>
         </div>
     </main>
 </Page>
+<style>
+    tr td {
+        padding: 8px 0px; /* Sesuaikan ukuran padding yang masuk akal */
+    }
+</style>
