@@ -9,17 +9,14 @@ import Navbar from "../components/Navbar.astro";
     <Navbar />
     <main id="dashboard">
         <div class="container">
-            <div class="between">
+            <div class="between pdln-header">
                 <div class="title-container">
-                    <h2 class="title">Program</h2>
+                    <h2 class="title">Programs</h2>
                     <p class="subtitle">Programs within each study program</p>
                 </div>
-                <a href="#" class="btn green">Create</a>
+                <button type="button" class="btn-create">New Program</button>
             </div>
-        </div>
 
-        <div class="container">
-            <div class="card">
                 <div class="table-container">
                     <table>
                         <thead>
@@ -68,7 +65,6 @@ import Navbar from "../components/Navbar.astro";
                         </tbody>
                     </table>
                 </div>
-            </div>
         </div>
     </main>
 </Page>
