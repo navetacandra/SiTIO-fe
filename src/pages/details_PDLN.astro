@@ -1,0 +1,224 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Input from "../components/Input.astro";
+---
+
+
+<Page title="Home">
+    <Sidebar active="dashboard" />
+    <main>
+        <div class="container">
+            
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title details-title">
+                        <span>Pertukaran Mahasiswa di Universitas Singapura</span>
+                        <span class="badge approved">Approved</span>
+                    </h3>
+                    <p class="subtitle2">ID : #20000</p>
+
+                </div>
+                <div style="padding-bottom: 1%">
+                <div class="input-cols">
+               <p class="content-title">DESTINATION</p>
+               <p class="content-title">CREATOR</p>
+                </div>
+                <div class="input-cols">
+               <p class="content-body">National University of Singapore, Singapore, Singapura</p>
+               <p class="content-body">Intan Sari <span class="content-body-thin">MAHASISWA</span></p>
+                </div>
+                </div>
+                
+                <div style="padding-bottom: 1%">
+                <div class="input-cols">
+               <p class="content-title">START DATE</p>
+               <p class="content-title">END DATE</p>
+                </div>
+                <div class="input-cols">
+               <p class="content-body">01 Aug 2025</p>
+               <p class="content-body">20 Dec 2025</p>
+                </div>
+                </div>
+
+                <div style="padding-bottom: 1%">
+                <div class="input-cols">
+               <p class="content-title">FOLLOW-UP PLAN</p>
+                </div>
+                <div class="input-cols">
+               <p class="content-body">Mengikuti Konversi mata kuliah dan melaporkan capaian pembelajaran kepada koordinator program.</p>
+                </div>
+                </div>
+
+                <div style="padding-bottom: 1%">
+                <div class="input-cols">
+               <p class="content-title">SP SETNEG</p>
+                </div>
+                <div class="input-cols">
+               <p class="content-body">SETNEG-2025-0002</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title details-title">
+                        <span>Update Status</span>
+                    </h3>
+
+
+                </div>
+                    <div class="input-flex-cols">
+                <div class="label">New Status</div>
+                <div class="label">SP SETNEG (on approval)</div>
+                <div class="label"></div>
+
+               <div class="dropdown">
+                <button class="dropbtn">Approved (current) 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                <a href="#">Rejected</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                </div>
+             </div>
+
+                <div class="input-box2">
+                <Input
+                        id="SP_SETNEG"
+                        placeholder="Institution where activities take place or which invites"
+                        type="text"
+                        required
+                    />
+                </div>
+                <div class="input-box2" style="margin-top: 2px;">
+                 <input type="submit" class="btn-submit" value="Apply">
+                </div>
+
+            </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Participants</h3>
+                <div class="table-container" style="margin-top: 20px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Position</th>
+                                <th>Passport</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bagas Setiawan</td>
+                                <td> </td>
+                                <td>MAHASISWA</td>
+                                <td>A1000010</td>
+                            </tr>
+                            <tr>
+                                <td>Bagas Setiawan</td>
+                                <td> </td>
+                                <td>MAHASISWA</td>
+                                <td>A1000010</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+             <div class="card">
+                <h3 class="card-title">Documents</h3>
+                <div class="table-container" style="margin-top: 20px;">
+                    <table>
+                       
+                        <tbody>
+                            <tr>
+                                <td><p class="content-title-title">Brosur</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Bukti Registrasi</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Clearance Letter</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Draft MOU/MOA</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Jadwal Kegiatan <span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Memo Persetujuan </p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Surat Keterangan Relevansi <span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Surat Pernyataan Pembiayaan <span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Surat Tugas<span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">TOR Kegiatan<span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="content-title-title">Undangan<span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+             <div class="card" style="margin-bottom: 40px;">
+                <div class="title-container">
+                    <h3 class="title">Activity</h3>
+                </div>
+                    <Input
+                        label="Follow-up"
+                        id="Follow-up"
+                        placeholder=""
+                        type="textarea"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Impact Recommendation"
+                        id="Follow-up"
+                        placeholder=""
+                        type="textarea"
+                        required
+                        showRequired
+                    />
+                    <div class="input-cols">
+                        <Input
+                        label="Cost Realization"
+                        id="Cost_realization"
+                        placeholder=""
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <p class="label">Report File <br> <span class="choosefile">Choose File</span> <span class="content-title" style="margin-left: 10px;">No File Chosen</span> </p>
+                 </div>
+                 <div class="input-box2" style="margin-top: 2px;">
+                 <input type="submit" class="btn-submit" value="Submit">
+                </div>
+                    
+                
+            </div>
+            <a href="pdln" class="back">Back to PDLN</a>
+
+            </div>
+    </main>
+</Page>
+<style>
+    tr td {
+        padding: 10px;
+    }
+</style>

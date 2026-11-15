@@ -87,7 +87,7 @@ import Input from "../components/Input.astro";
                     id="followup_plan"
                     type="textarea"
                     placeholder="Follow up plan after this activity"
-                    required
+                    required 
                     showRequired
                 />
             </div>
@@ -222,11 +222,16 @@ import Input from "../components/Input.astro";
                     />
                 </div>
             </div>
-        </div>
+
+            <div class="input-box3">
+                 <button type="button" class="btn-submit" onclick="document.location='details_PDLN'">Create PDLN</button>
+                 <a href="pdln" class="back">Cancel</a>
+            </div>
+        </div> 
     </main>
 </Page>
 <style>
     tr td {
-        padding: 8px 0px; /* Sesuaikan ukuran padding yang masuk akal */
+        padding: 8px 0px; 
     }
 </style>
