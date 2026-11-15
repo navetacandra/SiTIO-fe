@@ -1,0 +1,129 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create Inbound">
+    <Sidebar active="create_inbound" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">Create Inbound</h2>
+                <p class="subtitle">
+                    A new inbound request starts in Pending status.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Applicant</h3>
+                </div>
+
+                <Input
+                    label="Full Name"
+                    id="full_name"
+                    placeholder="Full name of the applicant"
+                    type="dropdown"
+                    options={["John Doe", "Jane Smith", "Bob Johnson"]}
+                    required
+                    showRequired
+                />
+
+                <div class="input-cols">
+                    <Input
+                        label="Birth Date"
+                        id="birth_date"
+                        placeholder="Birth date of the applicant"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Birth Location"
+                        id="birth_location"
+                        placeholder="Birth location of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                </div>
+                <Input
+                    label="Address"
+                    id="address"
+                    placeholder="Address of the applicant"
+                    type="textarea"
+                    required
+                    showRequired
+                />
+                <div class="input-cols">
+                    <Input
+                        label="Passport Number"
+                        id="passport_number"
+                        placeholder="Passport number of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Passport Expiry Date"
+                        id="passport_expiry"
+                        placeholder="Passport expiry date of the applicant"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Program</h3>
+                </div>
+
+                <div class="input-cols">
+                    <Input
+                        label="Letter Type"
+                        id="letter_type"
+                        placeholder="Type of the letter"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Inbound Program"
+                        id="inbound_program"
+                        placeholder="Name of the program"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Duration"
+                        id="duration"
+                        placeholder="Duration of the program"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Duration Unit"
+                        id="duration_unit"
+                        placeholder="Unit of the duration (e.g., weeks, months)"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                </div>
+                <text style="font-size: 14px; font-weight: 500; color: rgb(187, 187, 187); padding-top: 4px;">
+                    Optional; set together with the unit.
+                </text>
+            </div>
+
+            <button type="button" class="btn-create" style="margin-top: 20px;">Create Inbound</button>
+            <button type="button" class="btn-cancel" style="margin-top: 20px;">Cancel</button>
+        </div>
+    </main>
+</Page>

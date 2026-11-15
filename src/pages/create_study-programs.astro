@@ -1,0 +1,41 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create Study Programs">
+    <Sidebar active="create_study-programs" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Create Study Program</h3>
+                </div>
+                
+                <Input
+                    label="Name"
+                    id="name"
+                    placeholder="Name of the study program"
+                    type="text"
+                    required
+                    showRequired
+                />
+                <Input
+                    label="Department"
+                    id="department"
+                    placeholder="Department of the study program"
+                    type="text"
+                    required
+                    showRequired    
+                />
+            </div>
+
+            <br/>
+            <button type="button" class="btn-create">Create Study Program</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+    </main>
+</Page>

@@ -1,0 +1,56 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create Tickets">
+    <Sidebar active="create_tickets" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">Create Tickets</h2>
+                <p class="subtitle">
+                    Programs available for inbound applications
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h2 class="title">Submit a Ticket</h2>
+                    <h3 class="subtitle">No account needed. We will reply to the email you provide.</h3>
+                </div>
+
+                <Input
+                    label="Email"
+                    id="email"
+                    placeholder="Your email address"
+                    type="email"
+                    required
+                    showRequired
+                />
+                <Input
+                    label="Question"
+                    id="question"
+                    placeholder="Your question or issue"
+                    type="textarea"
+                    required
+                    showRequired    
+                />
+                <Input
+                    label="Attachment (Optional)"
+                    id="attachment"
+                    type="file"
+                    hint="PDF, JPG, or PNG (max. 5MB)"
+                    placeholder="Choose a file to attach"
+                />
+            </div>
+
+            <br/>
+            <button type="button" class="btn-create">Create Ticket</button> 
+            <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+    </main>
+</Page>

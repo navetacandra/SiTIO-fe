@@ -1,0 +1,113 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="Create Outbound">
+    <Sidebar active="create_outbound" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">Create Outbound</h2>
+                <p class="subtitle">
+                    A new request starts pending status
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Applicant</h3>
+                </div>
+
+                <div class="input-cols">
+                    <Input
+                        label="Academic Year"
+                        id="academic_year"
+                        placeholder="Academic year of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Semester"
+                        id="semester"
+                        placeholder="Semester of the applicant"
+                        type="select"
+                        options={["1", "2", "3", "4", "5", "6", "7", "8"]}
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Letter Type"
+                        id="letter_type"
+                        placeholder="Type of letter requested"
+                        type="select"
+                        options={["Enrollment", "Visa Recommendation", "Director Recommendation"]}
+                        required
+                        showRequired    
+                    />
+                    <Input
+                        label="Program"
+                        id="program"
+                        placeholder="Name of the program"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input  
+                        label="Go As"
+                        id="go_as"
+                        placeholder="Role of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />  
+                    <Input
+                        label="Destination Country"
+                        id="destination"
+                        placeholder="Destination country of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                </div>
+
+                <Input
+                    label="Destination Institution"
+                    id="destination_institution"
+                    placeholder="Destination institution of the applicant"
+                    type="text"
+                    required
+                    showRequired
+                />
+
+                <div class="input-cols">
+                    <Input
+                        label="Start Date"
+                        id="start_date"
+                        placeholder="Start date of the program"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="End Date"
+                        id="end_date"
+                        placeholder="End date of the program"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                </div>
+            </div>
+
+            <br>
+            <button type="button" class="btn-create">Create Outbound</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+
+        </div>
+    </main>
+</Page> 

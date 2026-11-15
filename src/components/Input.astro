@@ -10,7 +10,7 @@ const hiddenFileInput = type === "file" ? "display: hidden" : "";
         {required && showRequired && <small class="required-mark">*</small>}
     </label>
     <div class="input-group">
-        {type !== "textarea" && (
+        {type !== "textarea" && type !== "select" && (
             <input
                 type={type}
                 placeholder={placeholder}
@@ -19,6 +19,14 @@ const hiddenFileInput = type === "file" ? "display: hidden" : "";
                 style={hiddenFileInput}
                 {required}
             />
+        )}
+        {type === "select" && (
+            <select id={id} name={id} {required}>
+                <option value="" disabled selected>{placeholder}</option>
+                {Astro.props.options.map((option) => (
+                    <option value={option}>{option}</option>
+                ))}
+            </select>
         )}
         {type === "textarea" && <textarea
             placeholder={placeholder}
