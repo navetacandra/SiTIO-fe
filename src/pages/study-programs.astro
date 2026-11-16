@@ -5,6 +5,54 @@ import Navbar from "../components/Navbar.astro";
 ---
 
 <Page title="Study Programs">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer is:inline>
+        function showDelete(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Delete',
+                confirmButtonColor: 'var(--red)',
+                html: `
+                    <form method="POST" action="#" id="delete-form" style="display: none;">
+                        <input type="hidden" name="id" value="${id}">
+                    </form>
+                `,
+                preConfirm: () => {
+                    // 1. Set a flag before the page unloads
+                    sessionStorage.setItem('deleteSuccess', 'true');
+                    document.querySelector('#delete-form').submit();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('deleteSuccess') === 'true') {
+                sessionStorage.removeItem('deleteSuccess');
+
+                Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                }).fire({
+                    icon: 'success',
+                    title: 'Deleted successfully'
+                });
+            }
+        });
+    </script>
     <Sidebar active="study-programs" />
     <Navbar />
     <main id="dashboard">
@@ -32,7 +80,7 @@ import Navbar from "../components/Navbar.astro";
                                 <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
                                 <td> 
                                     <button type="button" class="yellow" onclick="window.location.href='edit_study-programs'">Edit</button>
-                                    <button type="button" class="red" onclick="window.location.href='/delete_konfirmasi'">Delete</button> 
+                                    <button type="button" class="red" onclick="showDelete(1)">Delete</button> 
                                 </td>
                             </tr>
 
@@ -41,7 +89,7 @@ import Navbar from "../components/Navbar.astro";
                                 <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
                                 <td> 
                                     <button type="button" class="yellow" onclick="window.location.href='edit_study-programs'">Edit</button>
-                                    <button type="button" class="red" onclick="window.location.href='/delete_konfirmasi'">Delete</button> 
+                                    <button type="button" class="red" onclick="showDelete(2)">Delete</button> 
                                 </td>   
                             </tr>
 
@@ -50,7 +98,7 @@ import Navbar from "../components/Navbar.astro";
                                 <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
                                 <td> 
                                     <button type="button" class="yellow" onclick="window.location.href='edit_study-programs'">Edit</button>
-                                    <button type="button" class="red" onclick="window.location.href='/delete_konfirmasi'">Delete</button> 
+                                    <button type="button" class="red" onclick="showDelete(3)">Delete</button> 
                                 </td>
                             </tr>
 
@@ -59,7 +107,7 @@ import Navbar from "../components/Navbar.astro";
                                 <td>Fakultas Ilmu Sosial dan Ilmu Politik</td>
                                 <td> 
                                     <button type="button" class="yellow" onclick="window.location.href='edit_study-programs'">Edit</button>
-                                    <button type="button" class="red" onclick="window.location.href='/delete_konfirmasi'">Delete</button> 
+                                    <button type="button" class="red" onclick="showDelete(4)">Delete</button> 
                                 </td>
                             </tr> 
                         </tbody>
