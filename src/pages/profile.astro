@@ -1,0 +1,100 @@
+---
+import Page from "../template/Page.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
+import Input from "../components/Input.astro";
+---
+
+<Page title="profile">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+    <Sidebar active="edit_inbound-programs" />
+    <Navbar />
+    <main id="dashboard">
+        <div class="container">
+            <div class="card" style="padding-left: 30px; padding-right: 30px; padding-bottom: 2%; ">
+                <div class="title-container">   
+                    <h3 class="title">
+                        Siti Aminah
+                    </h3>
+                     <p class="subtitle" style="font-size: 13px; font-weight: 400; color: rgb(54, 54, 54); margin-top: -10px;">admin@io.pnj.ac.id - ADMIN </p>
+                </div>
+                <p class="subtitle" style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 500; color: rgb(54, 54, 54); padding-bottom: 5px;">4 of 5 steps complete <span>80%</span></p>
+
+                        <div class="w3-light-grey" style="width: 100%;">
+                    <div class="w3-green" style="height:10px; width:75%; border-radius: 20px;"></div>
+                    </div>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Personal Details</h3>
+                </div>
+                <Input
+                    label="Full Name"
+                    id="activity_name"
+                    type="text"
+                    error="Contoh text error"
+                    required
+                    showRequired
+                   
+                />
+                <div class="input-cols">
+                    <Input
+                        label="Phone"
+                        id="Phone"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Birthdate"
+                        id="Birthdate"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                </div>
+                <div class="input-cols">
+                    <Input
+                        label="Birth Location"
+                        id="Birth_Location"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="NIK"
+                        id="NIK"
+                        type="text"
+                        hint="16 digits, optional."
+                        required
+                        showRequired
+                    />
+                </div>
+                <div class="input-cols">
+                    <Input
+                        label="Passport Number"
+                        id="Passport_Number"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                  
+                </div>
+                <Input
+                    label="Address"
+                    id="followup_plan"
+                    type="textarea"
+                    required 
+                    showRequired
+                />
+
+                <div class="input-box3">
+                 <button type="button" class="btn-submit" style="height: 40px;">Save Answer</button>
+                 <a class="back">Cancel</a>
+                </div>
+            </div>
+
+        </div>
+        </main>
+    </Page>
