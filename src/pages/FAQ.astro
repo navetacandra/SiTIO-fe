@@ -9,8 +9,8 @@ import Navbar from "../components/Navbar.astro";
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
     />
-    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer is:inline>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script is:inline>
         function showDelete(id) {
             Swal.fire({
                 title: 'Are you sure?',
@@ -25,7 +25,6 @@ import Navbar from "../components/Navbar.astro";
                     </form>
                 `,
                 preConfirm: () => {
-                    // 1. Set a flag before the page unloads
                     sessionStorage.setItem('deleteSuccess', 'true');
                     document.querySelector('#delete-form').submit();
                 }

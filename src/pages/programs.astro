@@ -25,7 +25,6 @@ import Navbar from "../components/Navbar.astro";
                     </form>
                 `,
                 preConfirm: () => {
-                    // 1. Set a flag before the page unloads
                     sessionStorage.setItem('deleteSuccess', 'true');
                     document.querySelector('#delete-form').submit();
                 }
