@@ -180,7 +180,6 @@ nav {
 main {
   min-height: 100dvh;
   width: 100%;
-  padding-left: 19.375rem;
   background-color: var(--bg);
 }
 
@@ -318,6 +317,10 @@ main {
   .btn-create {
     flex-shrink: 0;
   }
+}
+
+aside ~ main {
+  padding-left: 19.375rem;
 }
 
 .card {
