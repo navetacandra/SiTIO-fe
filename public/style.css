@@ -250,6 +250,17 @@ main {
     opacity: 0.7;
   }
 
+  .content-file {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    padding-top: 4px;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   
 
   .content-body-thin{
