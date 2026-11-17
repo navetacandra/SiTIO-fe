@@ -56,5 +56,6 @@ const hiddenFileInput = type === "file" ? "display: hidden" : "";
             </label>
         )}
     </div>
+    {!!hint && type !== "file" && <small class="input-hint">{hint}</small>}
     {!!error && <small class="error-message">{error}</small>}
 </div>
