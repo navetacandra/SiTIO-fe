@@ -80,9 +80,9 @@ import Navbar from "../components/Navbar.astro";
                         <td>Apakah pengajuan yang ditolak dapat diajukan ulang?</td>
                         <td>Pengajuan dengan status REVISION dapat diperbaiki dan diajukan ulang, sedangkan pengajuan REJECTED harus dibuat baru.</td>
                         <td>Siti Aminah</td>
-                        <td>
-                            <button type="button" class="gray" onclick="window.location.href='/edit_faq'">Edit</button>
-                            <button type="button" class="gray" onclick="showDelete(1)">Delete</button>
+                        <td class="actions">
+                            <button type="button" class="btn-edit" onclick="window.location.href='/edit_faq'">Edit</button>
+                            <button type="button" class="btn-delete" onclick="showDelete(1)">Delete</button>
                         </td>
                     </tr>
 
@@ -90,9 +90,9 @@ import Navbar from "../components/Navbar.astro";
                         <td>Bagaimana cara mengetahui status pengajuan?</td>
                         <td>Status pengajuan dapat dilihat pada halaman detail PDLN atau Outbound. Status akan berubah sesuai tahapan verifikasi.</td>
                         <td>Siti Aminah</td>
-                        <td>
-                            <button type="button" class="gray" onclick="window.location.href='/edit_faq'">Edit</button>
-                            <button type="button" class="gray" onclick="showDelete(2)">Delete</button>
+                        <td class="actions">
+                            <button type="button" class="btn-edit" onclick="window.location.href='/edit_faq'">Edit</button>
+                            <button type="button" class="btn-delete" onclick="showDelete(2)">Delete</button>
                         </td>
                     </tr>
 
@@ -100,9 +100,9 @@ import Navbar from "../components/Navbar.astro";
                         <td>Apa dokumen yang diperlukan dalam persyaratan outbound?</td>
                         <td>Dokumen wajib meliputi surat permohonan, surat persetujuan dosen pembimbing, dan laporan akhir setelah kegiatan selesai.</td>
                         <td>Dr. Ahmad Fauzi, M.T.</td>
-                        <td>
-                            <button type="button" class="gray" onclick="window.location.href='/edit_faq'">Edit</button>
-                            <button type="button" class="gray" onclick="showDelete(3)">Delete</button>
+                        <td class="actions">
+                            <button type="button" class="btn-edit" onclick="window.location.href='/edit_faq'">Edit</button>
+                            <button type="button" class="btn-delete" onclick="showDelete(3)">Delete</button>
                         </td>
                     </tr>
 
@@ -111,9 +111,9 @@ import Navbar from "../components/Navbar.astro";
                         <td>Apa itu SiTIO?</td>
                         <td>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</td>
                         <td>Dr. Ahmad Fauzi, M.T.</td>
-                        <td>
-                            <button type="button" class="gray" onclick="window.location.href='/edit_faq'">Edit</button>
-                            <button type="button" class="gray" onclick="showDelete(4)">Delete</button>
+                        <td class="actions">
+                            <button type="button" class="btn-edit" onclick="window.location.href='/edit_faq'">Edit</button>
+                            <button type="button" class="btn-delete" onclick="showDelete(4)">Delete</button>
                         </td>
                     </tr>
                 </tbody>
@@ -122,3 +122,9 @@ import Navbar from "../components/Navbar.astro";
         </div>
     </main>
 </Page>
+
+<style>
+    .actions {
+        white-space: nowrap;
+    }
+</style>
