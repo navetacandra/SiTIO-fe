@@ -1,0 +1,88 @@
+---
+import Page from "../../../template/Page.astro";
+import Sidebar from "../../../components/Sidebar.astro";
+import Input from "../../../components/Input.astro";
+---
+
+
+<Page title="Home">
+    <Sidebar active="/admin/dashboard" />
+    <main>
+        <div class="container">
+            
+            <div class="card4">
+                <div class="title-container">
+                    <h3 class="title details-title">
+                        <span>Tiket #40000</span>
+                        <span class="badge approved">Done</span>
+                    </h3>
+                    <p class="subtitle2">bagas.setiawan@io.pnj.ac.id</p>
+
+                </div>
+
+                <div class="card-detail">
+                <div style="padding-bottom: 1%">
+                <div class="input-cols">
+               <p class="content-question-title">QUESTION</p>
+                </div>
+                <div class="input-cols">
+               <p class="content-question-body">Berapa lama proses penerbitan surat tugas untuk kegiatan internasional?</p>
+              </div>
+                </div>
+                </div>
+
+                <div class="card-detail-answer" style="margin-top: 1.5%;">
+                <div style="padding-bottom: 1%">
+                <div class="input-cols">
+               <p class="content-answer-title">ANSWER</p>
+                </div>
+                <div class="input-cols">
+               <p class="content-answer-body">Proses penerbitan surat tugas memerlukan waktu 3 sampai 5 hari kerja setelah seluruh dokumen lengkap.</p>
+               <p class="content-answer-name">Answered by Dr. Ahmad Fauzi, MT.</p>
+
+              </div>
+                </div>
+                </div>
+
+            </div>
+
+            
+            
+            <div class="card4" style="margin-top: 2%;">
+                <div class="title-container">
+                    <h3 class="title details-title">
+                        <span>Attachments</span>
+                    </h3>
+                </div>
+                <div class="content-body-thin">No Media Attached</div>
+
+               
+
+            </div>
+          
+
+             <div class="card4" style="margin-bottom: 40px; margin-top: 2%;">
+                <div class="title-container">
+                    <h3 class="title">Update Answered</h3>
+                </div>
+                    <Input
+                        label="Answer"
+                        id="Follow-up"
+                        placeholder=""
+                        type="textarea"
+                        required
+                        showRequired
+                    />
+                    
+                 <div class="input-box3">
+                 <button type="button" class="btn-submit">Save Answer</button>
+                 <a class="back">Cancel</a>
+                </div>
+            </div>
+                    
+                
+            </div>
+            <a href="/admin/pdln" class="back">Back to PDLN</a>
+
+    </main>
+</Page>

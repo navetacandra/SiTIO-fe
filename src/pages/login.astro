@@ -12,7 +12,6 @@ const characterSrc = "/nengok.png";
     <link rel="stylesheet" href="/style.css" />
     <title>Sign In | STIO PNJ</title>
 
-    <!-- Dipasang sebelum render pertama supaya tidak ada kedipan intro -->
     <script is:inline>
       (function () {
         try {
@@ -71,10 +70,9 @@ const characterSrc = "/nengok.png";
             </button>
           </form>
 
-          <p class="login__signup">Don't have an account? <a href="/registrasi_mahasiswa">Sign Up here</a></p>
+          <p class="login__signup">Don't have an account? <a href="/registrasi/mahasiswa">Sign Up here</a></p>
         </div>
 
-        <!-- Karakter: dua lapis dari gambar yang sama. Badan (tanpa tangan atas) + tangan (dilambaikan sendiri) -->
         <div class="login__character" aria-hidden="true">
           <img class="login__body" src={characterSrc} alt="" />
           <img class="login__hand" src={characterSrc} alt="" />
@@ -92,7 +90,6 @@ const characterSrc = "/nengok.png";
         const skipEvents = ["keydown", "pointerdown"];
         let finished = false;
 
-        // Dipanggil sekali saat intro selesai: tampilkan form
         function onIntroFinish() {
           if (finished) return;
           finished = true;
@@ -104,7 +101,6 @@ const characterSrc = "/nengok.png";
           }
         }
 
-        // Klik / tekan tombol apa saja = lewati intro
         function skipIntro() {
           doc.classList.add("no-intro");
           onIntroFinish();
@@ -115,16 +111,14 @@ const characterSrc = "/nengok.png";
         } else {
           hand?.addEventListener("animationend", onIntroFinish, { once: true });
           skipEvents.forEach((e) => addEventListener(e, skipIntro));
-          setTimeout(onIntroFinish, 7000); // jaga-jaga kalau animationend tidak terpanggil
+          setTimeout(onIntroFinish, 7000); 
         }
 
-        // Show Password
         const password = root.querySelector<HTMLInputElement>("#password");
         root.querySelector<HTMLInputElement>("#show-password")?.addEventListener("change", (e) => {
           if (password) password.type = (e.target as HTMLInputElement).checked ? "text" : "password";
         });
 
-        // Handle Login Submission
         const form = root.querySelector<HTMLFormElement>("#login-form");
         form?.addEventListener("submit", async (e) => {
           e.preventDefault();
@@ -136,13 +130,11 @@ const characterSrc = "/nengok.png";
             return;
           }
 
-          // Cek apakah ada backend PHP yang aktif di localhost atau direct submit
           try {
             const formData = new FormData();
             formData.append("identifier", identifier);
             formData.append("password", passVal);
 
-            // Coba panggil backend SiTIO jika berjalan di port Apache / PHP
             const res = await fetch("http://localhost/SiTIO/login", {
               method: "POST",
               body: formData,
@@ -150,15 +142,14 @@ const characterSrc = "/nengok.png";
             }).catch(() => null);
 
             if (res && res.ok) {
-              window.location.href = "/dashboard";
+              window.location.href = "/admin/dashboard";
               return;
             }
           } catch (err) {
             console.warn("Backend not reached, navigating to dashboard...", err);
           }
 
-          // Jika frontend berjalan mandiri / mockup
-          window.location.href = "/dashboard";
+          window.location.href = "/admin/dashboard";
         });
       }
     </script>

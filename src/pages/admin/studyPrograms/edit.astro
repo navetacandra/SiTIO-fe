@@ -1,0 +1,42 @@
+---
+import Page from "../../../template/Page.astro";
+import Sidebar from "../../../components/Sidebar.astro";
+import Navbar from "../../../components/Navbar.astro";
+import Input from "../../../components/Input.astro";
+---
+
+<Page title="Edit Study Programs">
+    <Sidebar active="/admin/studyPrograms/edit" />
+    <Navbar />
+    <main id="/admin/dashboard">
+        <div class="container">
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Edit Study Program</h3>
+                </div>
+                
+                <Input
+                    label="Name"
+                    id="name"
+                    placeholder="Name of the study program"
+                    type="text"
+                    required
+                    showRequired
+                />
+                <Input
+                    label="Department"
+                    id="department"
+                    placeholder="Department of the study program"
+                    type="text"
+                    required
+                    showRequired    
+                />
+            </div>
+
+            <div class="input-box3">
+                <button type="button" class="btn-submit" onclick="document.location='/admin/studyPrograms'">Update Study Program</button>
+                <a href="/admin/studyPrograms" class="back"> Cancel </a>
+            </div>
+        </div>
+    </main>
+</Page>

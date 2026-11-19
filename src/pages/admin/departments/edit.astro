@@ -1,0 +1,34 @@
+---
+import Page from "../../../template/Page.astro";
+import Sidebar from "../../../components/Sidebar.astro";
+import Navbar from "../../../components/Navbar.astro";
+import Input from "../../../components/Input.astro";
+---
+
+<Page title="Edit Departments">
+    <Sidebar active="/admin/departments/edit" />
+    <Navbar />
+    <main id="/admin/dashboard">
+        <div class="container">
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Edit Department</h3>
+                </div>
+                
+                <Input
+                    label="Name"
+                    id="name"
+                    placeholder="Name of the department"
+                    type="text"
+                    required
+                    showRequired
+                />
+            </div>
+
+            <div class="input-box3">
+                <button type="button" class="btn-submit" onclick="document.location='/admin/departments'">Update Department</button>
+                <a href="/admin/departments" class="back">Cancel</a>
+            </div>
+        </div>
+    </main>
+</Page>
