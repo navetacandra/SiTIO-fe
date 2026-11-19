@@ -19,8 +19,8 @@ const { active } = Astro.props;
         <span class="menu-title">Menu</span>
 
         <a
-            href="/dashboard"
-            class={"nav-link " + (active === "dashboard" ? " active" : "")}
+            href="/admin/dashboard"
+            class={"nav-link " + (active === "/admin/dashboard" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +37,8 @@ const { active } = Astro.props;
             <span>Dashboard</span>
         </a>
         <a
-            href="/pdln"
-            class={"nav-link " + (active === "pdln" ? " active" : "")}
+            href="/admin/pdln"
+            class={"nav-link " + (active === "/admin/pdln" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +56,8 @@ const { active } = Astro.props;
             <span>PDLN</span>
         </a>
         <a
-            href="/inbound"
-            class={"nav-link " + (active === "inbound" ? " active" : "")}
+            href="/admin/inbound"
+            class={"nav-link " + (active === "/admin/inbound" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +74,8 @@ const { active } = Astro.props;
             <span>Inbound</span>
         </a>
         <a
-            href="/outbound"
-            class={"nav-link " + (active === "outbound" ? " active" : "")}
+            href="/admin/outbound"
+            class={"nav-link " + (active === "/admin/outbound" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,8 +92,8 @@ const { active } = Astro.props;
             <span>Outbound</span>
         </a>
         <a
-            href="/paspor-dinas"
-            class={"nav-link " + (active === "paspor-dinas" ? " active" : "")}
+            href="/admin/pasporDinas"
+            class={"nav-link " + (active === "/admin/pasporDinas" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,8 +110,8 @@ const { active } = Astro.props;
             <span>Paspor Dinas</span>
         </a>
         <a
-            href="/tickets"
-            class={"nav-link " + (active === "tickets" ? " active" : "")}
+            href="/admin/tickets"
+            class={"nav-link " + (active === "/admin/tickets" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,9 +135,9 @@ const { active } = Astro.props;
         <span class="menu-title">Master Data</span>
 
         <a
-            href="/inbound-programs"
+            href="/admin/inboundPrograms"
             class={
-                "nav-link " + (active === "inbound-programs" ? " active" : "")
+                "nav-link " + (active === "/admin/inboundPrograms" ? " active" : "")
             }
         >
             <svg
@@ -157,8 +157,8 @@ const { active } = Astro.props;
             <span>Inbound Programs</span>
         </a>
         <a
-            href="/departments"
-            class={"nav-link " + (active === "departments" ? " active" : "")}
+            href="/admin/departments"
+            class={"nav-link " + (active === "/admin/departments" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -180,8 +180,8 @@ const { active } = Astro.props;
             <span>Departments</span>
         </a>
         <a
-            href="/study-programs"
-            class={"nav-link " + (active === "study-programs" ? " active" : "")}
+            href="/admin/studyPrograms"
+            class={"nav-link " + (active === "/admin/studyPrograms" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -199,8 +199,8 @@ const { active } = Astro.props;
             <span>Study Programs</span>
         </a>
         <a
-            href="/programs"
-            class={"nav-link " + (active === "programs" ? " active" : "")}
+            href="/admin/programs"
+            class={"nav-link " + (active === "/admin/programs" ? " active" : "")}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,8 +220,8 @@ const { active } = Astro.props;
         </a>
 
         <a
-        href="/FAQ"
-        class={"nav-link" + (active === "FAQ" ? " active" : "")}
+        href="/admin/faq"
+        class={"nav-link" + (active === "/admin/faq" ? " active" : "")}
         >
         <svg
                 xmlns="http://www.w3.org/2000/svg"
