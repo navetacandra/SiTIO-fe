@@ -1,0 +1,111 @@
+---
+import Page from "../../../template/Page.astro";
+import Sidebar from "../../../components/Sidebar.astro";
+import Navbar from "../../../components/Navbar.astro";
+import Input from "../../../components/Input.astro";
+---
+
+<Page title="Create Outbound">
+    <Sidebar active="outbound/create" isUser="1"/>
+    <Navbar />
+    <main id="/user/dashboard">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">Create Outbound</h2>
+                <p class="subtitle">
+                    A new request starts pending status
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="title-container">
+                    <h3 class="title">Applicant</h3>
+                </div>
+
+                <div class="input-cols">
+                    <Input
+                        label="Academic Year / Semester"
+                        id="academic_year"
+                        placeholder="2025 / 3"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Letter Type"
+                        id="letter_type"
+                        placeholder="Type of letter requested"
+                        type="select"
+                        options={["Enrollment", "Visa Recommendation", "Director Recommendation"]}
+                        required
+                        showRequired    
+                    />
+                    <Input
+                        label="Program"
+                        id="program"
+                        placeholder="Name of the program"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input  
+                        label="Go As"
+                        id="go_as"
+                        placeholder="Role of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />  
+                    <Input
+                        label="Destination Country"
+                        id="destination"
+                        placeholder="Destination country of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="Destination Institution"
+                        id="destination_institution"
+                        placeholder="Destination institution of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+                </div>
+
+                <div class="input-cols">
+                    <Input
+                        label="Start Date"
+                        id="start_date"
+                        placeholder="Start date of the program"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                    <Input
+                        label="End Date"
+                        id="end_date"
+                        placeholder="End date of the program"
+                        type="date"
+                        required
+                        showRequired
+                    />
+                </div>
+                <Input
+                    label="Letter of Acceptance" 
+                    id="letter_of_acceptance"
+                    type="file"
+                    hint="PDF, JPG, or PNG (max. 5MB)"
+                    required
+                    showRequired
+                />
+            </div>
+
+            <div class="input-box3">
+                 <button type="button" class="btn-submit" onclick="document.location='/user/outbound/details'">Create Outbound</button>
+                 <a href="/user/outbound" class="back">Cancel</a>
+            </div>
+        </div>
+    </main>
+</Page> 
