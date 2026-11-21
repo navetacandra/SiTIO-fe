@@ -1,157 +1,86 @@
 ---
-const logoSrc = "/logo.png";
-const characterSrc = "/nengok.png";
+import Page from "../template/Page.astro";
 ---
 
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Sign In | STIO PNJ</title>
-
-    <script is:inline>
-      (function () {
-        try {
-          if (
-            sessionStorage.getItem("login-intro") === "1" ||
-            matchMedia("(max-width: 768px)").matches ||
-            matchMedia("(prefers-reduced-motion: reduce)").matches
-          ) document.documentElement.classList.add("no-intro");
-        } catch (e) {}
-      })();
-    </script>
-    <noscript>
-      <style>
-        .login__sheet, .login__character, .login__hand { animation: none !important; }
-        .login__brand, .login__content { opacity: 1 !important; visibility: visible !important; transform: none !important; }
-      </style>
-    </noscript>
-  </head>
-
-  <body>
-    <main class="login" id="login">
-      <section class="login__sheet">
-        <div class="login__brand">
-          <img src={logoSrc} alt="Logo PNJ" />
-          <div>
-            <strong>STIO PNJ</strong>
-            <span>Sistem Terpusat International Office</span>
-          </div>
-        </div>
-
-        <div class="login__content">
-          <h1 class="login__title">Sign In</h1>
-
-          <form class="login__form" id="login-form">
-            <div class="login__field">
-              <label class="login__sr" for="username">Username / Email / Phone</label>
-              <input id="username" name="username" type="text" placeholder="Username / Email" autocomplete="username" required />
-            </div>
-            <div class="login__field">
-              <label class="login__sr" for="password">Password</label>
-              <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required />
+<Page title="Login">
+    <div class="login-wrapper">
+        <div class="login-left">
+            <div class="login-brand">
+                <img src="/logo.png" alt="logo pnj"/>
+                <div class="brand-info">
+                    <span class="brand-title">SiTIO PNJ</span> 
+                    <span class="brand-subtitle">Sistem Terpusat International Office</span>
+                </div> 
             </div>
 
-            <label class="login__show">
-              <input type="checkbox" id="show-password" />
-              Show Password
-            </label>
+            <div class="login-form-container">
+                <h1>Sign In</h1>
+                <form id="loginForm" method="POST">
+                    <div class="login-input-group">
+                        <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        required
+                        />
+                    </div>
 
-            <button class="login__submit" type="submit" id="submit-btn">
-              Login
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-                <polyline points="10 17 15 12 10 7" />
-                <line x1="15" y1="12" x2="3" y2="12" />
-              </svg>
-            </button>
-          </form>
+                    <div class="login-input-group">
+                        <input
+                        type="password"
+                        id="passwordInput"
+                        name="password"
+                        placeholder="Password"
+                        required
+                        />
+                    </div>
 
-          <p class="login__signup">Don't have an account? <a href="/registrasi/mahasiswa">Sign Up here</a></p>
+                    <label class="show-password">
+                        <input type="checkbox" id="togglePassword"/>
+                        <span>Show Password</span>
+                    </label>
+
+                    <button type="submit" class="btn-login">
+                        <span>Login</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            >
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                            <polyline points="10 17 15 12 10 7"/>
+                            <line x1="15" y1="12" x2="3" y2="12"/>
+                        </svg>
+                    </button>
+
+                    <p class="signup">
+                        Don't have an account? <a href="/registrasi/mahasiswa">Sign Up here</a>
+                    </p>
+                </form>
+            </div>
         </div>
 
-        <div class="login__character" aria-hidden="true">
-          <img class="login__body" src={characterSrc} alt="" />
-          <img class="login__hand" src={characterSrc} alt="" />
+        <div class="login-right">
+            <img
+                src="/nengok.svg"
+                alt="Mahasiswa PNJ"
+                class="peeking-illustration"
+            />
         </div>
-      </section>
-    </main>
+    </div>
+</Page>
 
-    <script>
-      const root = document.querySelector<HTMLElement>("#login");
+<script>
+  const togglePassword = document.getElementById("togglePassword") as HTMLInputElement;
+  const passwordInput = document.getElementById("passwordInput") as HTMLInputElement;
 
-      if (root) {
-        const doc = document.documentElement;
-        const hand = root.querySelector(".login__hand");
-        const username = root.querySelector<HTMLInputElement>("#username");
-        const skipEvents = ["keydown", "pointerdown"];
-        let finished = false;
-
-        function onIntroFinish() {
-          if (finished) return;
-          finished = true;
-          skipEvents.forEach((e) => removeEventListener(e, skipIntro));
-          root.classList.add("is-ready");
-          try { sessionStorage.setItem("login-intro", "1"); } catch {}
-          if (matchMedia("(hover: hover)").matches) {
-            setTimeout(() => username?.focus({ preventScroll: true }), 500);
-          }
-        }
-
-        function skipIntro() {
-          doc.classList.add("no-intro");
-          onIntroFinish();
-        }
-
-        if (doc.classList.contains("no-intro")) {
-          onIntroFinish();
-        } else {
-          hand?.addEventListener("animationend", onIntroFinish, { once: true });
-          skipEvents.forEach((e) => addEventListener(e, skipIntro));
-          setTimeout(onIntroFinish, 7000); 
-        }
-
-        const password = root.querySelector<HTMLInputElement>("#password");
-        root.querySelector<HTMLInputElement>("#show-password")?.addEventListener("change", (e) => {
-          if (password) password.type = (e.target as HTMLInputElement).checked ? "text" : "password";
-        });
-
-        const form = root.querySelector<HTMLFormElement>("#login-form");
-        form?.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const identifier = (root.querySelector<HTMLInputElement>("#username")?.value || "").trim();
-          const passVal = root.querySelector<HTMLInputElement>("#password")?.value || "";
-
-          if (!identifier || !passVal) {
-            alert("Harap isi username dan password!");
-            return;
-          }
-
-          try {
-            const formData = new FormData();
-            formData.append("identifier", identifier);
-            formData.append("password", passVal);
-
-            const res = await fetch("http://localhost/SiTIO/login", {
-              method: "POST",
-              body: formData,
-              credentials: "include"
-            }).catch(() => null);
-
-            if (res && res.ok) {
-              window.location.href = "/admin/dashboard";
-              return;
-            }
-          } catch (err) {
-            console.warn("Backend not reached, navigating to dashboard...", err);
-          }
-
-          window.location.href = "/admin/dashboard";
-        });
-      }
-    </script>
-  </body>
-</html>
+  togglePassword?.addEventListener("change", () => {
+    passwordInput.type = togglePassword.checked ? "text" : "password";
+  });
+</script>
