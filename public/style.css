@@ -243,7 +243,7 @@ main {
     opacity: 0.7;
   }
 
-   .content-  {
+   .content-body  {
     font-size: 14px; 
     font-weight: 700; 
     color: rgb(0, 0, 0);  
@@ -1038,10 +1038,6 @@ form {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-}
-
-
 .label {
   font-weight: 600;
     font-size: 0.875rem;
@@ -1182,7 +1178,6 @@ form {
 }
 
 
-
 .input-cols2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1266,9 +1261,166 @@ form {
   }
 }
 
-/* =========================================
-   My Applications Carousel Slider
-   ========================================= */
+.login-wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+.login-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--white);
+}
+
+.login-brand {
+  position: absolute;
+  top: 2rem;
+  left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  img {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
+  }
+
+  .brand-info {
+    display: flex;
+    flex-direction: column;
+    font-family: monospace, sans-serif;
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--black);
+      letter-spacing: 0.5px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.7rem;
+      color: var(--gray);
+    }
+  }
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 22rem;
+  text-align: center;
+
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+  }
+
+  form {
+    gap: 1rem;
+  }
+}
+
+.login-input-group input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: var(--green);
+  }
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 0.25rem;
+}
+
+.btn-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.75rem 2.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1rem auto 0.5rem auto;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--light-green);
+  }
+}
+
+.signup {
+  font-size: 0.8rem;
+  color: var(--black);
+  margin-top: 0.5rem;
+
+  a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.login-right {
+  position: relative;
+  background-color: var(--green);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  .peeking-illustration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80dvh;
+    width: auto;
+    transform: translateX(-37.8%);
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .login-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .login-right {
+    display: none;
+  }
+}
+
 .applications-header {
   display: flex;
   align-items: center;
@@ -1367,319 +1519,224 @@ form {
   }
 }
 
+.registrasi-wrapper {
+  position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.5rem 1.5rem 3rem 1.5rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.25),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("/latar-regis.svg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
+.registrasi-brand {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
 
-/* ERROR PAGE1*/
-.error-page {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #f3f4f7;
+  img {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
+  }
+
+  .brand-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    box-sizing: border-box;
+    flex-direction: column;
+    font-family: monospace, sans-serif;
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--black);
+      letter-spacing: 0.5px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.7rem;
+      color: #334155;
+    }
+  }
+}
+
+.registrasi-card {
+  width: 100%;
+  max-width: 54rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 2.75rem 3.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  .register-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 2rem;
+  }
+
+  form {
+    gap: 0.5rem;
+  }
+
+  .input-cols {
+    gap: 0 1.5rem;
+  }
+
+  .input-box3 {
+    margin-top: 1rem;
+  }
+}
+
+.btn-registrasi {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--light-green);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .registrasi-wrapper {
+    padding: 5rem 1rem 2rem 1rem;
+  }
+
+  .registrasi-brand {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .registrasi-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.error-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f3f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .error-container {
-    width: 100%;
-    max-width: 1100px;
-    min-height: 580px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 50px 70px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 65rem;
+  min-height: 36rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
 }
 
 .error-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1.6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
 }
 
 .error-image img {
-    width: 800px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  width: 44rem;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.20);
 }
 
 .error-content {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: -250px;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: -17rem;
+  z-index: 2;
 }
 
 .error-content h1 {
-    font-size: 150px;
-    font-weight: 700;
-    color: #000000;
-    line-height: 1;
-    margin: 0;
+  font-size: 8.5rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+  margin: 0;
 }
 
 .error-message {
-    font-size: 36px;
-    color: #000000;
-    margin: 20px 0 32px;
-    font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  margin: 1rem 0 2rem;
+  font-weight: 400;
 }
 
 .btn-back {
-    background-color: #005b46;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 13px 28px;
-    border-radius: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 0.3s;
+  background-color: #064e3b;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .btn-back:hover {
-    background-color: #004332;
-    transform: translateY(-2px);
+  background-color: #059669;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-    .error-container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 40px 20px;
-        min-height: auto;
-    }
-
-    .error-image img {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .error-content {
-        left: 0;
-    }
-
-    .error-content h1 {
-        font-size: 100px;
-    }
-
-    .error-message {
-        font-size: 26px;
-    }
-}
-
-/* ERROR PAGE2*/
-    * {
-        box-sizing: border-box;
-    }
-
-    .error-page {
-        min-height: 100vh;
-        width: 100%;
-        background-color: #f3f4f7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-    }
-
-    .error-container {
-        width: 100%;
-        max-width: 1100px;
-        min-height: 580px;
-        background-color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 60px;
-        padding: 50px 70px;
-    }
-
-    .error-image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .error-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
+  }
 
   .error-image img {
-    width: 800px !important;
-    max-width: none !important;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    max-width: 18rem;
+    transform: scale(1.2);
+  }
+
+  .error-content {
+    margin-left: 0;
+  }
+
+  .error-content h1 {
+    font-size: 5.5rem;
+  }
+
+  .error-message {
+    font-size: 1.5rem;
+  }
 }
-.error-content {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    left: -250px;
-}
-    .error-content h1 {
-        font-size: 150px;
-        font-weight: 700;
-        color: #000000;
-        line-height: 1;
-        margin: 0;
-    }
-
-    .error-message {
-        font-size: 36px;
-        color: #000000;
-        margin: 20px 0 32px;
-        font-weight: 400;
-    }
-
-    .btn-back {
-        background-color: #005b46;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 13px 28px;
-        border-radius: 14px;
-        font-size: 14px;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-    .btn-back:hover {
-        background-color: #004332;
-        transform: translateY(-2px);
-    }
-
-   @media (max-width: 768px) {
-    .error-image img {
-        max-width: 280px;
-    }
-}
-
-        .error-image img {
-            max-width: 280px;
-        }
-
-        .error-content h1 {
-            font-size: 100px;
-        }
-
-        .error-message {
-            font-size: 26px;
-        }
-        
-/* ERROR PAGE3*/
-    * {
-        box-sizing: border-box;
-    }
-
-    .error-page {
-        min-height: 100vh;
-        width: 100%;
-        background-color: #f3f4f7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-    }
-
-    .error-container {
-        width: 100%;
-        max-width: 1100px;
-        min-height: 580px;
-        background-color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 60px;
-        padding: 50px 70px;
-    }
-
-    .error-image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-  .error-image img {
-    width: 800px !important;
-    max-width: none !important;
-    height: auto;
-    object-fit: contain;
-}
-.error-content {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    left: -250px;
-}
-    .error-content h1 {
-        font-size: 150px;
-        font-weight: 700;
-        color: #000000;
-        line-height: 1;
-        margin: 0;
-    }
-
-    .error-message {
-        font-size: 36px;
-        color: #000000;
-        margin: 20px 0 32px;
-        font-weight: 400;
-    }
-
-    .btn-back {
-        background-color: #005b46;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 13px 28px;
-        border-radius: 14px;
-        font-size: 14px;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-    .btn-back:hover {
-        background-color: #004332;
-        transform: translateY(-2px);
-    }
-
-   @media (max-width: 768px) {
-    .error-image img {
-        max-width: 280px;
-    }
-}
-
-        .error-image img {
-            max-width: 280px;
-        }
-
-        .error-content h1 {
-            font-size: 100px;
-        }
-
-        .error-message {
-            font-size: 26px;
-        }
-    
-    
-
-   
-
-
-
-
