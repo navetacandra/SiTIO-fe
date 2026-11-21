@@ -1038,10 +1038,6 @@ form {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-}
-
-
 .label {
   font-weight: 600;
     font-size: 0.875rem;
@@ -1180,7 +1176,6 @@ form {
     }
   }
 }
-
 
 
 .input-cols2 {
@@ -1402,16 +1397,15 @@ form {
   background-color: var(--green);
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
 
   .peeking-illustration {
     position: absolute;
     bottom: 0;
-    left: -26.2rem;
-    height: 80%;
-    max-height: 680px;
+    left: 0;
+    height: 80dvh;
     width: auto;
-    object-fit: contain;
+    transform: translateX(-37.8%);
     z-index: 10;
     pointer-events: none;
   }
@@ -1635,5 +1629,114 @@ form {
 
   .registrasi-card {
     padding: 2rem 1.5rem;
+  }
+}
+
+.error-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f3f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.error-container {
+  width: 100%;
+  max-width: 65rem;
+  min-height: 36rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
+}
+
+.error-image {
+  flex: 1.6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
+}
+
+.error-image img {
+  width: 44rem;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.20);
+}
+
+.error-content {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: -17rem;
+  z-index: 2;
+}
+
+.error-content h1 {
+  font-size: 8.5rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+  margin: 0;
+}
+
+.error-message {
+  font-size: 2rem;
+  color: #000000;
+  margin: 1rem 0 2rem;
+  font-weight: 400;
+}
+
+.btn-back {
+  background-color: #064e3b;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .error-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
+  }
+
+  .error-image img {
+    width: 100%;
+    max-width: 18rem;
+    transform: scale(1.2);
+  }
+
+  .error-content {
+    margin-left: 0;
+  }
+
+  .error-content h1 {
+    font-size: 5.5rem;
+  }
+
+  .error-message {
+    font-size: 1.5rem;
   }
 }
