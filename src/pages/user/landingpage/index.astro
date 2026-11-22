@@ -1,0 +1,324 @@
+---
+import Page from "../../../template/Page.astro";
+---
+
+<Page title="Home">
+  <main class="landing-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Navbar Pill -->
+      <nav class="lp-navbar">
+        <div class="lp-brand">
+          <img src="/logo.png" alt="Logo SiTIO PNJ" class="lp-logo" />
+          <div class="lp-brand-text">
+            <span class="lp-brand-title">SiTIO PNJ</span>
+            <span class="lp-brand-sub">Sistem Terpusat International Office</span>
+          </div>
+        </div>
+
+        <div class="lp-nav-menu">
+          <a href="/user/landingpage" class="lp-nav-link">Home</a>
+          <a href="#about" class="lp-nav-link">About</a>
+          <a href="/user/inbound" class="lp-nav-link">Inbound</a>
+          <a href="/user/tickets" class="lp-nav-link">Tickets</a>
+          <a href="/user/dashboard" class="lp-nav-link">Dashboard</a>
+        </div>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <h2 class="judulkecil">Welcome To!</h2>
+        <h1 class="judul">SiTIO PNJ</h1>
+        <p class="kecil">Connecting Knowledge, Inspiring the World</p>
+      </div>
+
+      <!-- Scroll Indicator to About -->
+      <a href="#about" class="scroll-down-hint" aria-label="Scroll to About">
+        <span class="scroll-text">Scroll Down</span>
+        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- About Section (Siap dimodifikasi & discroll dari hero) -->
+    <section id="about" class="about-section" >
+        <div class="input-cols" style="margin-top: 5%; padding-bottom: 3%;">
+      <div class="about-container">
+        <div class="about-header">
+          <h2 class="about-title">ABOUT</h2>
+          <p class="about-desc">
+SiTIO (Sistem Terpusat International Office) is a centralized, web-based information system for the International Office of Politeknik Negeri Jakarta designed to streamline the management and monitoring of official overseas travel. The platform provides data and administrative services covering both trips abroad (Outbound) and visits from abroad (Inbound). It handles end-to-end workflows, including online applications, document revisions, State Secretariat Approval Letters (SP Setneg), and Accountability Reports (LPJ). Ultimately, SiTIO makes it easier for users to access information, monitor application statuses in real time, and view data developments over specific periods while improving bureaucratic efficiency.          </p>
+        </div>
+</div>
+<div class="input-cols">
+        <div class="about-put">
+         <img src="/PUT.svg" alt="" width="600" s/>
+        </div>
+</div>
+      </div>
+    </section>
+
+    <section id="global-network" class="about-section-gray">
+      <iframe
+        src="https://www.youtube.com/embed/Im00a5ZL46I?si=gQjHNoqxBGRWfbiy"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <h2 class="about-title">Our Global Network & Partnerships</h2>
+      <p class="about-desc">
+PNJ has built robust relationships with key stakeholders worldwide to foster international collaboration.</p>
+
+        <div class="country-grid">
+          <div class="country-item">
+            <img class="photocard" src="/Japan.svg" alt="Japan" />
+            <div class="country-card">
+              <span>Japan</span>
+              <img class="flag" src="/Japanflag.svg" alt="Japan flag" />
+            </div>
+          </div>
+
+          <div class="country-item">
+            <img class="photocard" src="/Taiwan.svg" alt="Taiwan" />
+            <div class="country-card">
+              <span>Taiwan</span>
+              <img class="flag" src="/Taiwanflag.svg" alt="Taiwan flag" />
+            </div>
+          </div>
+
+          <div class="country-item">
+            <img class="photocard" src="/Philipines.svg" alt="Philipines" />
+            <div class="country-card">
+              <span>Philipines</span>
+              <img class="flag" src="/Philipinesflag.svg" alt="Philipines flag" />
+            </div>
+          </div>
+
+        </div>
+          <div class="country-grid" style="margin-top: 40px;">
+          <div class="country-item" style="margin-left: 55%;">
+            <img class="photocard" src="/China.svg" alt="China" />
+            <div class="country-card">
+              <span>China</span>
+              <img class="flag" src="/Chinaflag.svg" alt="China flag" />
+            </div>
+          </div>
+
+           <div class="country-item" style="margin-left: 55%; margin-bottom: 30%;">
+            <img class="photocard" src="/Korea.svg" alt="Korea" />
+            <div class="country-card">
+              <span>Korea</span>
+              <img class="flag" src="/Koreaflag.svg" alt="Korea flag" />
+            </div>
+          </div>
+          </div>
+
+      
+      <div class="faq-container">
+        <h2 class="about-title" style="margin-left: -40%; padding-bottom: 5%;">Frequently Asked Question</h2>
+
+        <div class="faq-grid">
+
+          <details class="faq-card" open>
+            <summary class="faq-header">
+              <div class="faq-question-wrap">
+                <span class="faq-badge">Q</span>
+                <h3 class="faq-question">Apa itu SiTIO?</h3>
+              </div>
+              <span class="faq-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</p>
+            </div>
+          </details>
+
+          <details class="faq-card" open>
+            <summary class="faq-header">
+              <div class="faq-question-wrap">
+                <span class="faq-badge">Q</span>
+                <h3 class="faq-question">Apa itu SiTIO?</h3>
+              </div>
+              <span class="faq-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary class="faq-header">
+              <div class="faq-question-wrap">
+                <span class="faq-badge">Q</span>
+                <h3 class="faq-question">Apa itu SiTIO?</h3>
+              </div>
+              <span class="faq-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary class="faq-header">
+              <div class="faq-question-wrap">
+                <span class="faq-badge">Q</span>
+                <h3 class="faq-question">Apa itu SiTIO?</h3>
+              </div>
+              <span class="faq-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary class="faq-header">
+              <div class="faq-question-wrap">
+                <span class="faq-badge">Q</span>
+                <h3 class="faq-question">Apa itu SiTIO?</h3>
+              </div>
+              <span class="faq-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary class="faq-header">
+              <div class="faq-question-wrap">
+                <span class="faq-badge">Q</span>
+                <h3 class="faq-question">Apa itu SiTIO?</h3>
+              </div>
+              <span class="faq-arrow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-body">
+              <p>SiTIO adalah sistem informasi terintegrasi untuk pengelolaan kegiatan internasional mahasiswa dan dosen.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="about-section-footer" style="margin-top: 20%;">
+      <div class="footer-container">
+        <div class="footer-map-col">
+          <div class="footer-map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126885.72584834236!2d106.68441191640625!3d-6.370885199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec1cabb59bdf%3A0x28b4f84e4677f329!2sJakarta%20State%20Polytechnic!5e0!3m2!1sen!2sid!4v1795335626578!5m2!1sen!2sid" 
+              class="footer-iframe"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+          <div class="footer-address">
+            <img class="footer-pin" src="/location-pin.svg" alt="Location" width="20" height="20" />
+            <p class="footer-address-text">
+              <strong>Jakarta State Polytechnic</strong><br />
+              Jl. Prof. DR. G.A. Siwabessy, Kukusan, Kecamatan Beji, Kota Depok, Jawa Barat 16425, Indonesia
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-links-grid" >
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Quick Link</h3>
+            <div class="quick-links-grid">
+              <a href="/user/inbound" class="footer-link">Inbound</a>
+              <a href="/user/tickets" class="footer-link">Ticket</a>
+              <a href="/user/outbound" class="footer-link">Outbound</a>
+              <a href="/user/pdln" class="footer-link">PDLN</a>
+            </div>
+          </div>
+
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Support</h3>
+            <div class="support-icons-grid">
+
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1-2-2 2 2 0 0 1 2 2z"/>
+                </svg>
+              </a>
+
+              <a href="mailto:akademik@pnj.ac.id" class="social-btn" aria-label="Email">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+             
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43zM9.75 15.02l-.01-6.54 5.75 3.27z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Contact</h3>
+            <div class="contact-list">
+              <a href="tel:0217270036" class="contact-item">
+                <svg class="contact-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z"/>
+                </svg>
+                <span class="contact-text">021-7270036</span>
+              </a>
+              <a href="mailto:akademik@pnj.ac.id" class="contact-item">
+                <svg class="contact-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span class="contact-text">akademik@pnj.ac.id</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Page>
