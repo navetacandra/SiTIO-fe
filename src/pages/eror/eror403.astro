@@ -1,0 +1,19 @@
+---
+import Page from "../../template/Page.astro";
+---
+
+<Page title="403 Unauthorized">
+    <main class="error-page">
+        <div class="error-container">
+            <div class="error-image">
+                <img src="/unauthorized.svg" alt="403 Unauthorized"/>
+            </div>
+
+            <div class="error-content">
+                <h1>403</h1>
+                <p class="error-message">Unauthorized</p>
+                <a href="/user/dashboard" class="btn-back">GO BACK</a>
+            </div>
+        </div>
+    </main>
+</Page>

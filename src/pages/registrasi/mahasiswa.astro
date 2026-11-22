@@ -1,22 +1,21 @@
 ---
 import Page from "../../template/Page.astro";
-import Navbar from "../../components/Navbar.astro";
 import Input from "../../components/Input.astro";
 ---
 
 <Page title="Registrasi Mahasiswa">
-    <Navbar/>
-    <main id="/admin/dashboard">
-        <div class="container">
-            <div class="title-container">
-                <h1 class="title">Registrasi Mahasiswa</h1>
+    <div class="registrasi-wrapper">
+        <div class="registrasi-brand">
+            <img src="/logo.png" alt="Logo PNJ" />
+            <div class="brand-info">
+                <span class="brand-title">STIO PNJ</span>
+                <span class="brand-subtitle">Sistem Terpusat International Office</span>
             </div>
+        </div>
 
-            <div class="card">
-                <div class="title-container">
-                    <h3 class="title">Personal Details</h3>
-                </div>
-
+        <div class="registrasi-card">
+            <h1 class="register-title">Register Mahasiswa</h1>
+            <form id="registrasiForm" method="POST">
                 <Input
                     label="Full Name"
                     id="full_name"
@@ -25,7 +24,7 @@ import Input from "../../components/Input.astro";
                     required
                     showRequired
                 />
-            
+
                 <div class="input-cols">
                     <Input
                         label="NIK"
@@ -46,34 +45,34 @@ import Input from "../../components/Input.astro";
                     <Input
                         label="Email"
                         id="email"
-                        placeholder="jhon@example.com"   
+                        placeholder="jhon@example.com"
                         type="email"
                         required
-                        showRequired              
+                        showRequired
                     />
                     <Input
                         label="Password"
                         id="password"
-                        placeholder="Enter your password"   
+                        placeholder="Enter your password"
                         type="password"
                         required
-                        showRequired              
+                        showRequired
                     />
                     <Input
                         label="Birthplace"
                         id="birth-place"
-                        placeholder="Enter your birthpalce"   
+                        placeholder="Enter your birthplace"
                         type="text"
                         required
-                        showRequired              
+                        showRequired
                     />
                     <Input
                         label="Birthdate"
                         id="birth-date"
-                        placeholder=""   
+                        placeholder=""
                         type="date"
                         required
-                        showRequired              
+                        showRequired
                     />
                 </div>
 
@@ -97,7 +96,7 @@ import Input from "../../components/Input.astro";
                     />
                     <Input
                         label="Admission date"
-                        id="phone"
+                        id="admission_date"
                         placeholder=""
                         type="date"
                         required
@@ -106,18 +105,18 @@ import Input from "../../components/Input.astro";
                     <Input
                         label="Major"
                         id="major"
-                        placeholder="Major of the applicant"   
+                        placeholder="Major of the applicant"
                         type="text"
                         required
-                        showRequired              
+                        showRequired
                     />
                     <Input
                         label="Study Program"
                         id="study-program"
-                        placeholder="Study Program of the applicant"   
+                        placeholder="Study Program of the applicant"
                         type="text"
                         required
-                        showRequired              
+                        showRequired
                     />
                 </div>
 
@@ -129,10 +128,13 @@ import Input from "../../components/Input.astro";
                     required
                     showRequired
                 />
+
                 <div class="input-box3">
-                    <button type="button" class="btn-submit" onclick="document.location='login'">Save Changes</button>
+                    <button type="button" class="btn-registrasi" onclick="document.location='/login'">
+                        Save Changes
+                    </button>
                 </div>
-           </div>
+            </form>
         </div>
-    </main>
+    </div>
 </Page>
