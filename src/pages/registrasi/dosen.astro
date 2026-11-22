@@ -1,114 +1,119 @@
 ---
 import Page from "../../template/Page.astro";
-import Navbar from "../../components/Navbar.astro";
 import Input from "../../components/Input.astro";
 ---
 
 <Page title="Registrasi Dosen">
-    <Navbar/>
-    <main id="/admin/dashboard">
-        <div class="container">
-            <div class="title-container">
-                <h1 class="title">Registrasi Dosen</h1>
+    <div class="registrasi-wrapper">
+        <div class="registrasi-brand">
+            <img src="/logo.png" alt="Logo PNJ" />
+            <div class="brand-info">
+                <span class="brand-title">STIO PNJ</span>
+                <span class="brand-subtitle">Sistem Terpusat International Office PNJ</span>
             </div>
-
-            <div class="card">
-                <div class="title-container">
-                    <h3 class="title">Personal Details</h3>
-                </div>
-
-                <Input
-                    label="Full Name"
-                    id="full_name"
-                    placeholder="Full name of the applicant"
-                    type="text"
-                    required
-                    showRequired
-                />
-            
-                <div class="input-cols">
-                    <Input
-                        label="NIK"
-                        id="nik"
-                        placeholder="Nomor Induk Keluarga"
-                        type="number"
-                        required
-                        showRequired
-                    />
-                    <Input
-                        label="Phone"
-                        id="phone"
-                        placeholder="Ex.085232******"
-                        type="number"
-                        required
-                        showRequired
-                    />
-                    <Input
-                        label="Email"
-                        id="email"
-                        placeholder="jhon@example.com"   
-                        type="email"
-                        required
-                        showRequired              
-                    />
-                    <Input
-                        label="Password"
-                        id="password"
-                        placeholder="Enter your password"   
-                        type="password"
-                        required
-                        showRequired              
-                    />
-                    <Input
-                        label="Birthplace"
-                        id="birth-place"
-                        placeholder="Enter your birthpalce"   
-                        type="text"
-                        required
-                        showRequired              
-                    />
-                    <Input
-                        label="Birthdate"
-                        id="birth-date"
-                        placeholder=""   
-                        type="date"
-                        required
-                        showRequired              
-                    />
-                </div>
-
-                <Input
-                    label="Address"
-                    id="address"
-                    placeholder="Enter your address"
-                    type="textarea"
-                    required
-                    showRequired
-                />
-
-                <div class="input-cols">
-                    <Input
-                        label="NIP"
-                        id="nip"
-                        placeholder="Nomor Induk Pegawai"
-                        type="number"
-                        required
-                        showRequired
-                    />
-                    <Input
-                        label="Major"
-                        id="major"
-                        placeholder="Major of the applicant"
-                        type="text"
-                        required
-                        showRequired
-                    />
-                </div>
-
-                <div class="input-box3">
-                    <button type="button" class="btn-submit" onclick="document.location='login'">Save Changes</button>
-                </div>
-           </div>
         </div>
-    </main>
+
+        <div class="registrasi-card">
+            <h1 class="register-title">Register Dosen</h1>
+            <form id="registrasiForm" method="POST">
+                <div class="form-section">
+                    <div class="title-container">
+                        <h3 class="title">Personal Details</h3>
+                    </div>
+
+                    <Input
+                        label="Full Name"
+                        id="full_name"
+                        placeholder="Full name of the applicant"
+                        type="text"
+                        required
+                        showRequired
+                    />
+
+                    <div class="input-cols">
+                        <Input
+                            label="NIK"
+                            id="nik"
+                            placeholder="Nomor Induk Keluarga"
+                            type="number"
+                            required
+                            showRequired
+                        />
+                        <Input
+                            label="Phone"
+                            id="phone"
+                            placeholder="Ex.085232******"
+                            type="number"
+                            required
+                            showRequired
+                        />
+                        <Input
+                            label="Email"
+                            id="email"
+                            placeholder="jhon@example.com"
+                            type="email"
+                            required
+                            showRequired
+                        />
+                        <Input
+                            label="Password"
+                            id="password"
+                            placeholder="Enter your password"
+                            type="password"
+                            required
+                            showRequired
+                        />
+                        <Input
+                            label="Birthplace"
+                            id="birth-place"
+                            placeholder="Enter your birthpalce"
+                            type="text"
+                            required
+                            showRequired
+                        />
+                        <Input
+                            label="Birthdate"
+                            id="birth-date"
+                            placeholder=""
+                            type="date"
+                            required
+                            showRequired
+                        />
+                    </div>
+
+                    <Input
+                        label="Address"
+                        id="address"
+                        placeholder="Enter your address"
+                        type="textarea"
+                        required
+                        showRequired
+                    />
+
+                    <div class="input-cols">
+                        <Input
+                            label="NIP"
+                            id="nip"
+                            placeholder="Nomor Induk Pegawai"
+                            type="number"
+                            required
+                            showRequired
+                        />
+                        <Input
+                            label="Major"
+                            id="major"
+                            placeholder="Major of the applicant"
+                            type="text"
+                            required
+                            showRequired
+                        />
+                    </div>
+
+                    <div class="input-box3">
+                        <button type="button" class="btn-submit" onclick="document.location='login'">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </Page>
