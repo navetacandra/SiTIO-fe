@@ -2,124 +2,133 @@
 import Page from "../../../template/Page.astro";
 import Sidebar from "../../../components/Sidebar.astro";
 import Navbar from "../../../components/Navbar.astro";
+import ProgressStepper from "../../../components/ProgressStepper.astro";
 import Input from "../../../components/Input.astro";
 ---
 
-
-<Page title="Home">
-    <Sidebar active="dashboard" isUser="1"/>
+<Page title="Details Inbound">
+    <Sidebar active="dashboard" isUser="1" />
     <Navbar />
-    <main>
+    <main id="/user/inbound/details">
         <div class="container">
-            
+            <div class="title-container">
+                <h2 class="title">Details Inbound</h2>
+                <p class="subtitle">Programs available for inbound applications</p>
+            </div>
+
             <div class="card3">
                 <div class="title-container">
                     <h3 class="title details-title">
-                        <span>#600000 · Summer Course Sustainable Development# </span>
+                        <span>Inbound #540000</span>
                     </h3>
-
                 </div>
+
                 <div class="card-detail">
-                <div style="padding-bottom: 1.5%">
-                <div class="input-cols">
-               <p class="content-title">CREATOR</p>
-               <p class="content-title">PASSPORT</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body" style="font-weight: 500;">Somchai Prasert</p>
-               <p class="content-body" style="font-weight: 500;">B1000003 (expires 30 Sep 2029)</p>
-                </div>
-                </div>
-                
-                <div style="padding-bottom: 1.5%">
-                <div class="input-cols">
-               <p class="content-title">BIRTHDATE</p>
-               <p class="content-title">DURATIONED</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body" style="font-weight: 500;">02 Nov 2000 · Bangkok</p>
-               <p class="content-body" style="font-weight: 500;">1 MONTH</p>
-                </div>
-                </div>
-
-                <div style="padding-bottom: 1.5%">
-                <div class="input-cols">
-               <p class="content-title">ADDRESS</p>
-               <p class="content-title">LETTER</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body" style="font-weight: 500;">No. 42 Sukhumvit Road, Bangkok, Thailand</p>
-               <p class="content-body" style="font-weight: 500;">Open Letter</p>
-                </div>
-                </div>
-
-                <div style="padding-bottom: 1.5%">
-                <div class="input-cols">
-               <p class="content-title">DECIDER</p>
-               <p class="content-title">LETTER TYPE</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body" style="font-weight: 500;">Dr. Ahmad Fauzi, M.T.</p>
-               <p class="content-body" style="font-weight: 500;">Warranty</p>
-                </div>
-                </div>
-                
-            </div>
-            <div class="input-cols2" style="margin-top: 30px;">
-                <div class="card"> 
-                        <div class="title-container">
-                    <h3 class="title">Update Status</h3>
-                </div>
-                        <p class="label">New Status</p>
-                    <div class="status-row">
-                        <div class="dropdown">
-                <button class="dropbtn">Approved (current) 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m6 9 6 6 6-6"/>
-                    </svg>
-                </button>
-                <div class="dropdown-content">
-                <a href="#">Rejected</a>
-                <a href="#">Pending</a>
-                <a href="#">Approved</a>
-                </div>
-                </div>
-                 <input type="submit" class="btn-submit2" value="Apply">
-             
-             </div>
-
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">CREATOR</p>
+                            <p class="content-title">LETTER OF ACCEPTANCE</p>
+                            <p class="content-title">IDENTITY CARD</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Risky Pratama</p>
+                            <p class="content-body" style="font-weight: 500;">
+                                <a href="/Acceptance-Letter.pdf" target="_blank" rel="noopener noreferrer" class="content-file">
+                                    <img src="/docs.svg" alt="Document Icon" width="16" height="16" />
+                                    <span>Acceptance-Letter.pdf</span>
+                                </a>
+                            </p>
+                            <p class="content-body" style="font-weight: 500;">
+                                <a href="/Identity-Card.pdf" target="_blank" rel="noopener noreferrer" class="content-file">
+                                    <img src="/docs.svg" alt="Document Icon" width="16" height="16" />
+                                    <span>Identity-Card.pdf</span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
-                <div class="card"> 
-                          <div class="title-container">
-                    <h3 class="title">Upload Letter</h3>
-                </div>
-                        <p class="label">Choose File</p>
-                    <div class="status-row">
-                        <div class="dropdown">
-                            <div class="dropbtn">
-                                <span>Upload</span>
-                                <input
-                                    id="Undangan"
-                                    type="file"
-                                    required
-                                />
+
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">BIRTHDATE</p>
+                            <p class="content-title">PASSPORT NUMBER</p>
+                            <p class="content-title">PASSPORT EXPIRY</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">14 Mar 2026</p>
+                            <p class="content-body" style="font-weight: 500;">766863568262</p>
+                            <p class="content-body" style="font-weight: 500;">14 Mar 2026</p>
+                        </div>
+                    </div>
+
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">BIRTH LOCATION</p>
+                            <p class="content-title">GO AS</p>
+                            <p class="content-title">SUBMISSION DATE</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Belanda</p>
+                            <p class="content-body" style="font-weight: 500;">Mahasiswa</p>
+                            <p class="content-body" style="font-weight: 500;">24 Sept 2026</p>
+                        </div>
+                    </div>
+
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">DECIDERCOUNTRY OF ORIGIN</p>
+                            <p class="content-title">ADDRESS</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Belanda</p>
+                            <p class="content-body" style="font-weight: 500;">Depok</p>
+                        </div>
                     </div>
                 </div>
-                 <input type="submit" class="btn-submit2" value="Apply">
-             
-             </div>
+
+                <br/>
+                <div class="card-detail">
+                    <div style="padding-bottom: 1.5%;">
+                        <div class="input-cols">
+                            <p class="content-title">LETTER TYPE</p>
+                            <p class="content-title">INBOUND PROGRAM</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Warranty</p>
+                            <p class="content-body" style="font-weight: 500;">Study</p>
+                        </div>
+                    </div>
+
+                    <div style="padding: bottom 1.5%;">
+                        <div class="input-cols">
+                            <p class="content-title">DURATION</p>
+                            <p class="content-title">DURATION UNIT</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">---</p>
+                            <p class="content-body" style="font-weight: 500;">Not Set</p>
+                        </div>
+                    </div>
                 </div>
-
-                </div>
+                <ProgressStepper 
+                        steps={[
+                            { title: "Baru Diajukan", date: "24 Sept 2026", status: "completed" },
+                            { title: "Verifikasi Dokumen", date: "24 Sept 2026", status: "completed" },
+                            { title: "Ditolak", date: "25 Sept 2026", status: "error" },
+                            { title: "Selesai", date: "30 Sept 2026", status: "pending" }
+                        ]}
+                        note={{
+                            title: "Alasan Penolakan:",
+                            message: "Masa berlaku paspor dinas kurang dari 6 bulan dari jadwal kegiatan.",
+                            type: "error"
+                        }}
+                />
             </div>
-            </div>
-
-            <a href="/user/inbound" class="back" style="padding-left: 3%;">Back to Inbound</a>
-
+        </div>
+        <a href="/user/inbound" class="back" style="padding-left: 3%;">Back to Inbound</a>
     </main>
 </Page>
 <style>
-    tr td {
-        padding: 10px;
-    }
+  tr td {
+    padding: 10px;
+  }
 </style>
