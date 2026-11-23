@@ -1,224 +1,277 @@
 ---
 import Page from "../../../template/Page.astro";
 import Sidebar from "../../../components/Sidebar.astro";
+import Navbar from "../../../components/Navbar.astro";
 import Input from "../../../components/Input.astro";
+import ProgressStepper from "../../../components/ProgressStepper.astro";
 ---
 
-
 <Page title="Home">
-    <Sidebar active="dashboard" isUser="1"/>
+    <Sidebar active="dashboard" isUser="1" />
+    <Navbar />
     <main>
         <div class="container">
-            
-            <div class="card">
-                <div class="title-container">
-                    <h3 class="title details-title">
-                        <span>Pertukaran Mahasiswa di Universitas Singapura</span>
-                        <span class="badge approved">Approved</span>
-                    </h3>
-                    <p class="subtitle2">ID : #20000</p>
-
-                </div>
-                <div style="padding-bottom: 1%">
-                <div class="input-cols">
-               <p class="content-title">DESTINATION</p>
-               <p class="content-title">CREATOR</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body">National University of Singapore, Singapore, Singapura</p>
-               <p class="content-body">Intan Sari <span class="content-body-thin">MAHASISWA</span></p>
-                </div>
-                </div>
-                
-                <div style="padding-bottom: 1%">
-                <div class="input-cols">
-               <p class="content-title">START DATE</p>
-               <p class="content-title">END DATE</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body">01 Aug 2025</p>
-               <p class="content-body">20 Dec 2025</p>
-                </div>
+            <div class="card3">
+               <div class="title-container">
+                    <div class="details-title">
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <h3 class="title" style="margin: 0;">PDLN #23000</h3>
+                            <span class="badge pending">
+                                <span class="dot">●</span> Pending
+                            </span>
+                        </div>
+                        <a href="/user/pdln/edit" class="btn-edit">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+                                <path d="m15 5 4 4" />
+                            </svg>
+                            Edit PDLN
+                        </a>
+                    </div>
                 </div>
 
-                <div style="padding-bottom: 1%">
-                <div class="input-cols">
-               <p class="content-title">FOLLOW-UP PLAN</p>
-                </div>
-                <div class="input-cols">
-               <p class="content-body">Mengikuti Konversi mata kuliah dan melaporkan capaian pembelajaran kepada koordinator program.</p>
-                </div>
+                <div class="card-detail">
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">CREATOR</p>
+                            <p class="content-title" style="margin-left: 13%;">DESTINATION INSTITUTION</p>
+                            <p class="content-title">IDENTITY CARD</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Risky Pratama <span class="content-body-thin">MAHASISWA</span></p>
+                            <p class="content-body" style="font-weight: 500; margin-left: 13%;">02 Mar 2026</p>
+                            <p class="content-file">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                Kerpreg.pdf
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">ACTIVITY NAME</p>
+                            <p class="content-title" style="margin-left: 13%;">DESTINATION CITY</p>
+                            <p class="content-title">PASSPORT EXPIRY</p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Hackafest</p>
+                            <p class="content-body" style="font-weight: 500; margin-left: 13%;">14 Mar 2026</p>
+                            <p class="content-body" style="font-weight: 500;">Enrollment</p>
+                        </div>
+                    </div>
+
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">ACTIVITY TYPE</p>
+                            <p class="content-title" style="margin-left: 13%;">START DATE</p>
+                            <p class="content-title"></p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Research Collaboration</p>
+                            <p class="content-body" style="font-weight: 500; margin-left: 13%;">31 Des 2026</p>
+                            <p class="content-body" style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+
+                    <div style="padding-bottom: 1.5%">
+                        <div class="input-cols">
+                            <p class="content-title">DESTINATION COUNTRY</p>
+                            <p class="content-title" style="margin-left: 13%;">SUBMISSION DATE</p>
+                            <p class="content-title"></p>
+                        </div>
+                        <div class="input-cols">
+                            <p class="content-body" style="font-weight: 500;">Belanda</p>
+                            <p class="content-body" style="font-weight: 500; margin-left: 13%;">24 Sept 2026</p>
+                            <p class="content-body" style="font-weight: 400; opacity: 0.4;"></p>
+                        </div>
+                    </div>
                 </div>
 
-                <div style="padding-bottom: 1%">
-                <div class="input-cols">
-               <p class="content-title">SP SETNEG</p>
+                <div class="input-cols2" style="margin-top: 30px;">
+                    <div class="card-detail" style="width: 100%; box-sizing: border-box; padding-right: 30px; padding-left: 30px; line-height: 30px;">
+                        <div class="content-title">PARTICIPANTS</div>
+                        <div class="content-body" style="display: flex; justify-content: space-between;">
+                            <span>Bagas Setiawan</span>
+                            <span class="content-body-thin-role">MAHASISWA - bagas.setiawan@io.pnj.ac.id</span>
+                        </div>
+                        <div class="content-body" style="display: flex; justify-content: space-between;">
+                            <span>Budi Santoso</span>
+                            <span class="content-body-thin-role">SUPERADMIN - superadmin@io.pnj.ac.id</span>
+                        </div>
+                        <div class="content-body" style="display: flex; justify-content: space-between;">
+                            <span>Dewi Lestari, M.M</span>
+                            <span class="content-body-thin-role">DOSEN - dewi.lestari@io.pnj.ac.id</span>
+                        </div>
+                        <div class="content-body" style="display: flex; justify-content: space-between;">
+                            <span>Dr. Ahmad Fauzi, M.T.</span>
+                            <span class="content-body-thin-role">STRUKTURAL - wakil.dekan@io.pnj.ac.id</span>
+                        </div>
+                        <div class="content-body" style="display: flex; justify-content: space-between;">
+                            <span>Dr. Rina Wijaya, M.Kom.</span>
+                            <span class="content-body-thin-role">DOSEN - rina.wijaya@io.pnj.ac.id</span>
+                        </div>
+                    </div>
+
+                    <div class="card-detail" style="width: 100%; box-sizing: border-box; padding-right: 30px; padding-left: 30px;">
+                        <div class="input-cols2">
+                            <div class="content-title">JADWAL KEGIATAN</div>
+                            <div class="content-title">BROSUR</div>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                Jadwalkegiatan.pdf
+                            </p>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                Brosur.pdf
+                            </p>
+                        </div>
+
+                        <div class="input-cols2" >
+                            <div class="content-title">SURAT TUGAS</div>
+                            <div class="content-title">BUKTI REGISTRASI</div>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                SuratTugas.pdf
+                            </p>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                BuktiRegist.pdf
+                            </p>
+                        </div>
+
+                        <div class="input-cols2">
+                            <div class="content-title">MEMO PERSETUJUAN</div>
+                            <div class="content-title">TOR Kegiatan</div>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                MemoPersetujuan.pdf
+                            </p>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                TORkegiatan.pdf
+                            </p>
+                        </div>
+
+                        <div class="input-cols2">
+                            <div class="content-title">CLEARANCE LETTER</div>
+                            <div class="content-title">SK RELEVANSI</div>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                ClearanceLetter.pdf
+                            </p>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                SKrelevansi.pdf
+                            </p>
+                        </div>
+
+                        <div class="input-cols2">
+                            <div class="content-title">UNDANGAN</div>
+                            <div class="content-title">DRAFT MOU / MOA</div>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                Undangan.pdf
+                            </p>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                DRAFTMOU/MOA.pdf
+                            </p>
+                        </div>
+
+                        <div class="input-cols2">
+                            <div class="content-title">SP PEMBIAYAAN</div>
+                            <div class="content-title">LETTER OF ACCEPTANCE</div>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                SPpembiayaan.pdf
+                            </p>
+                            <p class="content-file-pdln">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg>
+                                LOA.pdf
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="input-cols">
-               <p class="content-body">SETNEG-2025-0002</p>
-                </div>
-                </div>
+                <div style="margin-top: 90px;">
+                 <ProgressStepper  
+                                steps={[
+                                    { title: "Baru Diajukan", date: "24 Sept 2026", status: "completed" },
+                                    { title: "Verifikasi Dokumen", date: "24 Sept 2026", status: "completed" },
+                                    { title: "Disetujui", date: "25 Sept 2026", status: "completed" },
+                                    { title: "Selesai", date: "26 Sept 2026", status: "completed" }
+                                ]}
+                                note={{
+                                    title: "Catatan Admin:",
+                                    message: "Pengajuan Anda telah disetujui. Silakan cetak dokumen resmi untuk keperluan keberangkatan."
+                                }}
+                            />
             </div>
-
-            <div class="card">
-                <div class="title-container">
-                    <h3 class="title details-title">
-                        <span>Update Status</span>
-                    </h3>
-
-
-                </div>
-                    <div class="input-flex-cols">
-                <div class="label">New Status</div>
-                <div class="label">SP SETNEG (on approval)</div>
-                <div class="label"></div>
-
-               <div class="dropdown">
-                <button class="dropbtn">Approved (current) 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m6 9 6 6 6-6"/>
-                    </svg>
-                </button>
-                <div class="dropdown-content">
-                <a href="#">Rejected</a>
-                <a href="#">Approved</a>
-                <a href="#">Pending</a>
-                </div>
-             </div>
-
-                <div class="input-box2">
-                <Input
-                        id="SP_SETNEG"
-                        placeholder="Institution where activities take place or which invites"
-                        type="text"
-                        required
-                    />
-                </div>
-                <div class="input-box2" style="margin-top: 2px;">
-                 <input type="submit" class="btn-submit" value="Apply">
-                </div>
-
             </div>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Participants</h3>
-                <div class="table-container" style="margin-top: 20px;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Role</th>
-                                <th>Position</th>
-                                <th>Passport</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bagas Setiawan</td>
-                                <td> </td>
-                                <td>MAHASISWA</td>
-                                <td>A1000010</td>
-                            </tr>
-                            <tr>
-                                <td>Bagas Setiawan</td>
-                                <td> </td>
-                                <td>MAHASISWA</td>
-                                <td>A1000010</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-             <div class="card">
-                <h3 class="card-title">Documents</h3>
-                <div class="table-container" style="margin-top: 20px;">
-                    <table>
-                       
-                        <tbody>
-                            <tr>
-                                <td><p class="content-title-title">Brosur</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Bukti Registrasi</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Clearance Letter</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Draft MOU/MOA</p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Jadwal Kegiatan <span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Memo Persetujuan </p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Surat Keterangan Relevansi <span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Surat Pernyataan Pembiayaan <span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Surat Tugas<span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">TOR Kegiatan<span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                            <tr>
-                                <td><p class="content-title-title">Undangan<span class="badge mandatory" style="margin-left: 12px;">Mandatory</span></p> <p class="content-title">Max 5120 KB</p> <p class="content-body-thin" style="opacity: 0.4;">Not uploaded</p></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-             <div class="card" style="margin-bottom: 40px;">
-                <div class="title-container">
-                    <h3 class="title">Activity</h3>
-                </div>
-                    <Input
-                        label="Follow-up"
-                        id="Follow-up"
-                        placeholder=""
-                        type="textarea"
-                        required
-                        showRequired
-                    />
-                    <Input
-                        label="Impact Recommendation"
-                        id="Follow-up"
-                        placeholder=""
-                        type="textarea"
-                        required
-                        showRequired
-                    />
-                    <div class="input-cols">
-                        <Input
-                        label="Cost Realization"
-                        id="Cost_realization"
-                        placeholder=""
-                        type="text"
-                        required
-                        showRequired
-                    />
-                    <p class="label">Report File <br> <span class="choosefile">Choose File</span> <span class="content-title" style="margin-left: 10px;">No File Chosen</span> </p>
-                 </div>
-                 <div class="input-box2" style="margin-top: 2px;">
-                 <input type="submit" class="btn-submit" value="Submit">
-                </div>
-                    
-                
-            </div>
-            <a href="/user/pdln" class="back">Back to PDLN</a>
-
-            </div>
+            <div style="margin-top: 40px;">
+            <a href="/user/outbound" class="back" style="padding-left: 3%;">Back to outbound</a>
+        </div>
+        </div>
     </main>
 </Page>
-<style>
-    tr td {
-        padding: 10px;
-    }
-</style>
