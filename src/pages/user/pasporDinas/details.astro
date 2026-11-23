@@ -3,6 +3,7 @@
 import Page from "../../../template/Page.astro";
 import Sidebar from "../../../components/Sidebar.astro";
 import Navbar from "../../../components/Navbar.astro";
+import ProgressStepper from "../../../components/ProgressStepper.astro";
 ---
 
 <Page title="Home">
@@ -41,8 +42,14 @@ import Navbar from "../../../components/Navbar.astro";
             </div>
 
             <div class="input-cols">
-              <p class="content-file">📄 Kerpreg.pdf</p>
-              <p class="content-file">📄 Akta-Lahir.pdf</p>
+              <p class="content-file"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg> Kerpreg.pdf</p>
+              <p class="content-file"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg> Akta-Lahir.pdf</p>
             </div>
           </div>
 
@@ -53,8 +60,14 @@ import Navbar from "../../../components/Navbar.astro";
             </div>
 
             <div class="input-cols">
-              <p class="content-file">📄 Ijazah.pdf</p>
-              <p class="content-file">📄 KK.pdf</p>
+              <p class="content-file"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg> Ijazah.pdf</p>
+              <p class="content-file"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg> KK.pdf</p>
             </div>
           </div>
 
@@ -65,47 +78,33 @@ import Navbar from "../../../components/Navbar.astro";
             </div>
 
             <div class="input-cols">
-              <p class="content-file">📄 Foto.pdf</p>
-              <p class="content-file">📄 SK-PNS.pdf</p>
+              <p class="content-file"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg> Foto.pdf</p>
+              <p class="content-file"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <path d="M14 2v6h6" />
+                                </svg> SK-PNS.pdf</p>
             </div>
           </div>
         </div>
 
 
        
-        <div class="progress-container">
-
-          <div class="progress-step">
-            <div class="progress-circle">✓</div>
-            <p class="progress-title">Baru Diajukan</p>
-            <small>24 Sept 2026</small>
-          </div>
-
-          <div class="progress-line"></div>
-
-          <div class="progress-step">
-            <div class="progress-circle">✓</div>
-            <p class="progress-title">Verifikasi Dokumen</p>
-            <small>24 Sept 2026</small>
-          </div>
-
-          <div class="progress-line"></div>
-
-          <div class="progress-step">
-            <div class="progress-circle">✓</div>
-            <p class="progress-title">Disetujui</p>
-            <small>25 Sept 2026</small>
-          </div>
-
-          <div class="progress-line"></div>
-
-          <div class="progress-step">
-            <div class="progress-circle">✓</div>
-            <p class="progress-title">Selesai</p>
-            <small>26 Sept 2026</small>
-          </div>
-
-        </div>
+        <ProgressStepper 
+                                steps={[
+                                    { title: "Baru Diajukan", date: "02 Nov 2026", status: "completed" },
+                                    { title: "Verifikasi Dokumen", date: "04 Nov 2026", status: "completed" },
+                                    { title: "Revisi", date: "05 Nov 2026", status: "warning" },
+                                    { title: "Selesai", date: "-", status: "pending" }
+                                ]}
+                                note={{
+                                    title: "Catatan Revisi:",
+                                    message: "Mohon upload ulang scan LoA (Letter of Acceptance) resmi yang berstempel.",
+                                    type: "warning"
+                                }}
+                            />
 
       </div>
 
