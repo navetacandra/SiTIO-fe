@@ -255,7 +255,7 @@ main {
 
 .details-title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-right: 5px;
@@ -268,7 +268,7 @@ main {
 .content-title {
   font-size: 14px;
   font-weight: 700;
-  color: rgb(54, 54, 54);
+  color: rgb(91, 91, 91);
   padding-top: 4px;
   opacity: 1;
 }
@@ -293,7 +293,7 @@ main {
 .content-body {
   font-size: 14px;
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  color: rgb(69, 69, 69);
   padding-top: 4px;
   opacity: 0.7;
 }
@@ -304,8 +304,20 @@ main {
   gap: 0.4rem;
   margin: 0;
   padding-top: 4px;
-  color: var(--green);
+  color: #05714f;
   font-size: 14px;
+  font-weight: 500;
+}
+
+.content-file-pdln {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: #059669;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -315,6 +327,13 @@ main {
   color: rgb(0, 0, 0);
   padding-top: 4px;
   opacity: 0.7;
+}
+
+.content-body-thin-role {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  opacity: 0.5;
 }
 
 .content-question-title {
@@ -873,10 +892,41 @@ button {
 .btn-edit {
   background-color: var(--orange);
   color: white;
-  border-radius: 5px;
-  padding: 9px;
+  border-radius: 8px;
+  padding: 8px 16px;
   border: none;
   box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-edit:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+.badge-pending-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5ff8c;
+  color: #92701a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  line-height: 1.2;
+}
+
+.badge-pending-pill .dot {
+  font-size: 8px;
+  line-height: 1;
 }
 
 .btn-delete {
