@@ -7,14 +7,14 @@ import Navbar from "../../../components/Navbar.astro";
 <Page title="Paspor Dinas">
     <Sidebar active="pasporDinas" />
     <Navbar />
-    <main id="/admin/dashboard">
+    <main id="dashboard">
         <div class="container">
             <div class="between pdln-header">
                 <div class="title-container">
                     <h2 class="title">Paspor Dinas</h2>
                     <p class="subtitle">Programs available for inbound application</p>
                 </div>
-                <button type="button" class="btn-create" onclick="location.href='/admin/pasporDinas/create'">Create Paspor Dinas</button>
+                <button type="button" class="btn-create" onclick="location.href='/create_paspor-dinas'">Create Paspor Dinas</button>
             </div>
 
                 <div class="table-container">
@@ -35,8 +35,8 @@ import Navbar from "../../../components/Navbar.astro";
                                     <div class="badge approved">Done</div>
                                 </td>
                                 <td> 
-                                    <button type="button" class="yellow" onclick="window.location.href='/admin/pasporDinas/edit'">Edit</button>
-                                    <button type="button" class="gray" onclick="window.location.href='/admin/pasporDinas/details'">Details</button> 
+                                    <button type="button" class="btn-edit" onclick="window.location.href='edit_paspor-dinas'">Edit</button>
+                                    <button type="button" class="btn-detail" onclick="window.location.href='details_paspor-dinas'" style="margin-left: 8px;">Details</button>
                                 </td>
                             </tr>
 
@@ -47,8 +47,8 @@ import Navbar from "../../../components/Navbar.astro";
                                     <div class="badge approved">Done</div>
                                 </td>
                                 <td> 
-                                    <button type="button" class="yellow" onclick="window.location.href='/admin/pasporDinas/edit'">Edit</button>
-                                    <button type="button" class="gray" onclick="window.location.href='/admin/pasporDinas/details'">Details</button>  
+                                    <button type="button" class="btn-edit" onclick="window.location.href='edit_paspor-dinas'">Edit</button>
+                                    <button type="button" class="btn-detail" onclick="window.location.href='details_paspor-dinas'" style="margin-left: 8px;">Details</button>
                                 </td>   
                             </tr>
 
@@ -59,8 +59,8 @@ import Navbar from "../../../components/Navbar.astro";
                                     <div class="badge pending">Pending</div>
                                 </td>
                                 <td> 
-                                    <button type="button" class="yellow" onclick="window.location.href='/admin/pasporDinas/edit'">Edit</button>
-                                    <button type="button" class="gray" onclick="window.location.href='/admin/pasporDinas/details'">Details</button> 
+                                    <button type="button" class="btn-edit" onclick="window.location.href='edit_paspor-dinas'">Edit</button>
+                                    <button type="button" class="btn-detail" onclick="window.location.href='details_paspor-dinas'" style="margin-left: 8px;">Details</button>
                                 </td>
                             </tr>
 
@@ -71,8 +71,8 @@ import Navbar from "../../../components/Navbar.astro";
                                     <div class="badge approved">Done</div>
                                 </td>
                                 <td> 
-                                    <button type="button" class="yellow" onclick="window.location.href='/admin/pasporDinas/edit'">Edit</button>
-                                    <button type="button" class="gray" onclick="window.location.href='/admin/pasporDinas/details'">Details</button> 
+                                    <button type="button" class="btn-edit" onclick="window.location.href='edit_paspor-dinas'">Edit</button>
+                                    <button type="button" class="btn-detail" onclick="window.location.href='details_paspor-dinas'" style="margin-left: 8px;">Details</button>
                                 </td>
                             </tr>
                         </tbody>
